@@ -158,7 +158,9 @@
     /* filter .6s, opacity .6s, transform .6s, box-shadow .3s; */
 }
 .menu-img:hover{
-    filter: grayscale(100%);
+    filter: grayscale(0%);
+    transition: all .6s;
     /* transition:filter .6s, opacity .6s, transform .6s, box-shadow .3s; */
 }
+
 
