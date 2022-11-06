@@ -25,14 +25,14 @@
             <div class="grid wide">
                 <div class="header-control">
                     <img src="image/logo-Sunhomes-BBQ-01.png" alt="" class="logo height-center">
-                    <ul class="nav height-center">
+                    <ul class="navv height-center">
                         <li><a href="">Trang chủ</a></li>
                         <li><a href="">Giới thiệu</a></li>
                         <li><a href="">Đặt bàn</a></li>
                         <li><a href="">Thực đơn</a></li>
                         <li><a href="">Tin tức</a></li>
                         <li><a href="">Liên hệ</a></li>
-                        <li><a href="">đăng nhập</a></li>
+                        <li><a href="" class="arrow"><i class="fa-solid fa-caret-down"></i></a></li>
                         <li><a href="" class="hotline">Hotline: 0984966806</a></li>
                     </ul>
                 </div>
