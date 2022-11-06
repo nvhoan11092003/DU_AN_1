@@ -12,18 +12,18 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                     <div  class="item active">
-                        <img src="image/slider01.jpg" style="position: relative; top: -80px;" alt="Los Angeles">
+                        <img src="view/image/slider01.jpg" style="position: relative; top: -80px;" alt="Los Angeles">
                     </div>
 
                     <div  class="item">
-                        <img src="image/SLIDER2.jpg" style="position: relative; top: -80px;" alt="Chicago">
+                        <img src="view/image/SLIDER2.jpg" style="position: relative; top: -80px;" alt="Chicago">
                     </div>
 
                     <div  class="item">
-                        <img src="image/slider3.jpg" style="position: relative; top: -80px;" alt="New York">
+                        <img src="view/image/slider3.jpg" style="position: relative; top: -80px;" alt="New York">
                     </div>
                     <div  class="item">
-                        <img src="image/slider4.jpg" style="position: relative; top: -80px;" alt="New York">
+                        <img src="view/image/slider4.jpg" style="position: relative; top: -80px;" alt="New York">
                     </div>
                 </div>
 
@@ -38,7 +38,7 @@
                 </a>
             </div>
         </div>
-        <img src="image/bang-gia-01-1024x165.png" alt="" class="list-price">
+        <img src="view/image/bang-gia-01-1024x165.png" alt="" class="list-price">
         <div class="grid wide">
             <div class="row">
                 <div class="col l-6">
@@ -58,12 +58,12 @@
                 </div>
                 <div class="col l-6">
                     <div class="space-between">
-                        <div class="intro"><img class="intro-img" src="image/charm_korean_bbq_yelp.0.webp" alt="">
+                        <div class="intro"><img class="intro-img" src="view/image/charm_korean_bbq_yelp.0.webp" alt="">
                             <a href="" class="order-link"><i class="order-icon fa-sharp fa-solid fa-star"></i><span>Chọn
                                     combo</span></a>
                         </div>
                         <div class="intro"><img class="intro-img"
-                                src="image/eyJrZXkiOiI3NzU0YmVhMi0wNmE4LTRhYTYtOGM4My0yNDc1MWE2MTM3ZGUuanBlZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAwfX19.webp"
+                                src="view/image/eyJrZXkiOiI3NzU0YmVhMi0wNmE4LTRhYTYtOGM4My0yNDc1MWE2MTM3ZGUuanBlZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAwfX19.webp"
                                 alt="">
                             <a href="" class="order-link" style="min-width: 150px;"><i
                                     class="order-icon fa-sharp fa-solid fa-heart"></i><span>gọi món nướng</span></a>
@@ -78,12 +78,12 @@
                     <div class="col l-6 menu-mt">
                         <div class="row">
                             <div class="col l-6">
-                                <img src="image/1212.jpg" alt="" class="menu-img">
-                                <img src="image/4534545345.jpg" alt="" class="menu-img">
+                                <img src="view/image/1212.jpg" alt="" class="menu-img">
+                                <img src="view/image/4534545345.jpg" alt="" class="menu-img">
                             </div>
                             <div class="col l-6">
-                                <img src="image/fzn_0496_ll-900x598-300x199.jpg" alt="" class="menu-img">
-                                <img src="image/fzn_0370_ll12-1.jpg" alt="" class="menu-img">
+                                <img src="view/image/fzn_0496_ll-900x598-300x199.jpg" alt="" class="menu-img">
+                                <img src="view/image/fzn_0370_ll12-1.jpg" alt="" class="menu-img">
                             </div>
                         </div>
                     </div>
@@ -118,10 +118,10 @@
                 </div>
                 <div class="col l-6">
                     <div class="space-between">
-                        <div class="intro"><img class="intro-img" src="image/nha-hang-king-bbq-1-2-679x1024.jpg" alt="">
+                        <div class="intro"><img class="intro-img" src="view/image/nha-hang-king-bbq-1-2-679x1024.jpg" alt="">
 
                         </div>
-                        <div class="intro"><img class="intro-img" src="image/nha-hang-king-bbq-1-1-679x1024.jpg" alt="">
+                        <div class="intro"><img class="intro-img" src="view/image/nha-hang-king-bbq-1-1-679x1024.jpg" alt="">
 
                         </div>
                     </div>
@@ -143,7 +143,7 @@
                 <div class="col l-6">
                     <div class="space-between">
                         <div class="korea"><img class="korea-img"
-                                src="image/213854-set-menu-han-quoc-hap-dan-danh-cho-2-nguoi-suon-nuong-han-quoc.jpg"
+                                src="view/image/213854-set-menu-han-quoc-hap-dan-danh-cho-2-nguoi-suon-nuong-han-quoc.jpg"
                                 alt="">
                         </div>
                     </div>
@@ -162,22 +162,22 @@
             <div class="row m-t">
                 <div class="col l-3">
                     <a href="" class="korea-link">
-                        <img src="image/cach-an-thit-nuong-2.jpg" alt="" class="korea-link-img">
+                        <img src="view/image/cach-an-thit-nuong-2.jpg" alt="" class="korea-link-img">
                     </a>
                 </div>
                 <div class="col l-3">
                     <a href="" class="korea-link">
-                        <img src="image/img20161208034438844.jpg" alt="" class="korea-link-img">
+                        <img src="view/image/img20161208034438844.jpg" alt="" class="korea-link-img">
                     </a>
                 </div>
                 <div class="col l-3">
                     <a href="" class="korea-link">
-                        <img src="image/1-11-2014-6-05-19-PM.jpg" alt="" class="korea-link-img">
+                        <img src="view/image/1-11-2014-6-05-19-PM.jpg" alt="" class="korea-link-img">
                     </a>
                 </div>
                 <div class="col l-3">
                     <a href="" class="korea-link">
-                        <img src="image/1-11-2014-6-05-19-PM.jpg" alt="" class="korea-link-img">
+                        <img src="view/image/1-11-2014-6-05-19-PM.jpg" alt="" class="korea-link-img">
                     </a>
                 </div>
             </div>
