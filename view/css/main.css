@@ -21,11 +21,11 @@
 
 }
 
-.nav li {
+.navv li {
     display: inline-block;
 }
 
-.nav li a {
+.navv li a {
     display: block;
     text-decoration: none;
     color: #c6c3ba;
@@ -35,7 +35,7 @@
     padding: 8px;
 }
 
-.nav li a:hover {
+.navv li a:hover {
     color: var(--primary-color);
 }
 
@@ -129,18 +129,15 @@
     text-decoration: none;
     font-size: 1.2rem;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 550;
     background-color: #000;
     color: #fff;
-
     position: absolute;
     z-index: 1;
     bottom: 10%;
     line-height: 32px;
     border-radius: 5px;
-
-
-    max-width: 170px;
+    max-width: 174px;
     left: 50%;
     transform: translateX(-50%);
 
@@ -149,14 +146,14 @@
 .order-icon {
     color: #fff;
     display: block;
-    margin-left: 14px;
-    margin-right: auto;
+    margin-left: 12px;
+    margin-right: 0px;
 
 }
 
 .order-link span {
 
-    margin-right: 14px;
+    margin-right: 12px;
     margin-left: 8px;
 
 }
