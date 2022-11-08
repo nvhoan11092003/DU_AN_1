@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="view/css/base.css">
@@ -18,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
     <!-- tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
 </head>
 
 <body>
@@ -28,14 +29,24 @@
                 <div class="header-control">
                     <a href="index.php"><img src="view/image/logo-Sunhomes-BBQ-01.png" alt="" class="logo height-center"></a> 
                     <ul class="navv height-center">
-                        <li><a href="index.php">Trang chủ</a></li>
-                        <li><a href="">Giới thiệu</a></li>
-                        <li><a href="">Đặt bàn</a></li>
-                        <li><a href="">Thực đơn</a></li>
-                        <li><a href="">Tin tức</a></li>
-                        <li><a href="index.php?act=dangnhap">Đăng Nhập</a></li>
-                        <li><a href="" class="arrow"><i class="fa-solid fa-caret-down"></i></a></li>
-                        <li><a href="" class="hotline">Hotline: 0984966806</a></li>
+                        <li class="navv-item"><a class="navv-item-link" href="index.php">Trang chủ</a></li>
+                        <li class="navv-item"><a class="navv-item-link" href="">Giới thiệu</a></li>
+                        <li class="navv-item"><a class="navv-item-link" href="">Đặt bàn</a></li>
+                        <li class="navv-item"><a class="navv-item-link" href="">Thực đơn</a></li>
+                        <li class="navv-item"><a class="navv-item-link" href="">Tin tức</a></li>
+                        <li class="navv-item"><a class="navv-item-link" href="">Liên hệ</a></li>
+                        <li class="navv-item">
+                        <a class="navv-item-link" href="" class="arrow"><i class="fa-solid fa-caret-down"></i></a>
+                            <ul class="sub-navv">
+                                
+                                <li class="sub-navv-item"><a href="index.php?act=dangnhap" class="sub-navv-link">Đăng nhập</a></li>
+                                <li class="sub-navv-item"><a href="" class="sub-navv-link">Đăng ký</a></li>
+                                <li class="sub-navv-item"><a href="" class="sub-navv-link">Cập nhật tài khoản</a></li>    
+                            </ul>
+
+                        </li>
+                        <li class="navv-item"><a href="" class="hotline">Hotline: 0984966806</a></li>
+
                     </ul>
                 </div>
             </div>
