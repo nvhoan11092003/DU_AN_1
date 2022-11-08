@@ -26,14 +26,23 @@
                 <div class="header-control">
                     <img src="view/image/logo-Sunhomes-BBQ-01.png" alt="" class="logo height-center">
                     <ul class="navv height-center">
-                        <li><a href="">Trang chủ</a></li>
-                        <li><a href="">Giới thiệu</a></li>
-                        <li><a href="">Đặt bàn</a></li>
-                        <li><a href="">Thực đơn</a></li>
-                        <li><a href="">Tin tức</a></li>
-                        <li><a href="">Liên hệ</a></li>
-                        <li><a href="" class="arrow"><i class="fa-solid fa-caret-down"></i></a></li>
-                        <li><a href="" class="hotline">Hotline: 0984966806</a></li>
+                        <li class="navv-item"><a class="navv-item-link" href="">Trang chủ</a></li>
+                        <li class="navv-item"><a class="navv-item-link" href="">Giới thiệu</a></li>
+                        <li class="navv-item"><a class="navv-item-link" href="">Đặt bàn</a></li>
+                        <li class="navv-item"><a class="navv-item-link" href="">Thực đơn</a></li>
+                        <li class="navv-item"><a class="navv-item-link" href="">Tin tức</a></li>
+                        <li class="navv-item"><a class="navv-item-link" href="">Liên hệ</a></li>
+                        <li class="navv-item">
+                        <a class="navv-item-link" href="" class="arrow"><i class="fa-solid fa-caret-down"></i></a>
+                            <ul class="sub-navv">
+                                
+                                <li class="sub-navv-item"><a href="" class="sub-navv-link">Đăng nhập</a></li>
+                                <li class="sub-navv-item"><a href="" class="sub-navv-link">Đăng ký</a></li>
+                                <li class="sub-navv-item"><a href="" class="sub-navv-link">Cập nhật tài khoản</a></li>    
+                            </ul>
+
+                        </li>
+                        <li class="navv-item"><a href="" class="hotline">Hotline: 0984966806</a></li>
                     </ul>
                 </div>
             </div>

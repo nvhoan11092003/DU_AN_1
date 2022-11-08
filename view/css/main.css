@@ -17,25 +17,24 @@
     max-height: 84px;
 }
 
-.nav {
-
-}
-
-.navv li {
+.navv-item {
     display: inline-block;
+    line-height: 100px;
+    position: relative;
 }
 
-.navv li a {
-    display: block;
+.navv .navv-item a {
+    
     text-decoration: none;
     color: #c6c3ba;
     font-size: 1.5rem;
-    line-height: 1.6rem;
+    
     font-weight: 500;
     padding: 8px;
+    z-index: 1;
 }
 
-.navv li a:hover {
+.navv .navv-item a:hover {
     color: var(--primary-color);
 }
 
@@ -53,6 +52,25 @@
 
     border-radius: 5px;
     border: 1px solid #c6c6c6;
+}
+
+.sub-navv{
+    position: absolute;
+    top: 100px;
+    z-index: 2;
+    
+}
+.sub-navv-item{
+   width: 200px;
+    height: 40px;
+    color: #fff;
+    list-style: none;
+}
+.sub-navv-link{
+    text-decoration: none;
+    
+    display: block;
+    line-height: 32px;
 }
 
 /* slider */
