@@ -20,8 +20,8 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'value':
             # code...
             break;
-        case 'value':
-            # code...
+        case 'dangnhap':
+            include "view/taikhoan/dangnhap.php";
             break;
         case 'value':
             # code...
