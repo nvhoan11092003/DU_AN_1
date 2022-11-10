@@ -1,9 +1,9 @@
 <div class="banner"><img src="view/image/banner-234.jpg" alt="" class="banner-img"></div>
 <h1 class="menu-title">THỰC ĐƠN TẠI HÀ NỘI</h1>
 <div class="list-menu-link">
-    <a href="" class="menu-link active">Chọn món nướng</a>
+    <a href="#" class="menu-link active">Chọn món nướng</a>
     <div class="center"></div>
-    <a href="" class="menu-link">Combo xèo xèo</a>
+    <a href="#" class="menu-link">Combo xèo xèo</a>
 </div>
 <div class="grid wide">
     <div class="row border">
@@ -25,9 +25,20 @@
                             <li class="category-item"><i class=" check-icon fa-sharp fa-solid fa-check"></i><a href="" class="category-item-link">Miến xào Hàn Quốc</a></li>
                         </ul>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script>
+    var active = document.getElementsByClassName("menu-link");
+   active[0].onclick=function(){
+    active[0].classList.add('active');
+    active[1].classList.remove('active');
+   }
+   active[1].onclick=function(){
+    active[1].classList.add('active');
+    active[0].classList.remove('active');
+   }
+</script>
