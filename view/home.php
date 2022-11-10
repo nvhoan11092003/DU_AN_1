@@ -58,12 +58,12 @@
                 </div>
                 <div class="col l-6">
                     <div class="space-between">
-                        <div class="intro"><img class="intro-img" src="view/image/charm_korean_bbq_yelp.0.webp" alt="">
+                        <div class="intro"><img class="intro-img" src="view/image/menu_trang_chu_xeo_xeo_gogi.png" alt="">
                             <a href="" class="order-link"><i class="order-icon fa-sharp fa-solid fa-star"></i><span>Chọn
                                     combo</span></a>
                         </div>
                         <div class="intro"><img class="intro-img"
-                                src="view/image/eyJrZXkiOiI3NzU0YmVhMi0wNmE4LTRhYTYtOGM4My0yNDc1MWE2MTM3ZGUuanBlZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAwfX19.webp"
+                                src="view/image/lau2-1.png"
                                 alt="">
                             <a href="" class="order-link" style="min-width: 150px;"><i
                                     class="order-icon fa-sharp fa-solid fa-heart"></i><span>gọi món nướng</span></a>
@@ -207,7 +207,7 @@
                         <form action="">
                             <input type="text" class="set-order-text" placeholder="Tên của bạn...">
                             <input type="text" class="set-order-text" placeholder="Số điện thoại...">
-                            <input type="text" class="set-order-text" placeholder="Số người ăn...">
+                            <input type="number" class="set-order-text" placeholder="Số người ăn...">
                             <input type="date" class="set-order-text" placeholder="">
 
                             <div class="list-check-box">

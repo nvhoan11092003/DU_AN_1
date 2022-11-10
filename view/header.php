@@ -30,9 +30,9 @@
                     <a href="index.php"><img src="view/image/logo-Sunhomes-BBQ-01.png" alt="" class="logo height-center"></a> 
                     <ul class="navv height-center">
                         <li class="navv-item"><a class="navv-item-link" href="index.php">Trang chủ</a></li>
-                        <li class="navv-item"><a class="navv-item-link" href="">Giới thiệu</a></li>
-                        <li class="navv-item"><a class="navv-item-link" href="">Đặt bàn</a></li>
-                        <li class="navv-item"><a class="navv-item-link" href="">Thực đơn</a></li>
+                        <li class="navv-item"><a class="navv-item-link" href="index.php?act=gioi_thieu">Giới thiệu</a></li>
+                        <li class="navv-item"><a class="navv-item-link" href="index.php?act=dat_ban">Đặt bàn</a></li>
+                        <li class="navv-item"><a class="navv-item-link" href="index.php?act=thuc_don">Thực đơn</a></li>
                         <li class="navv-item"><a class="navv-item-link" href="">Tin tức</a></li>
                         <li class="navv-item"><a class="navv-item-link" href="">Liên hệ</a></li>
                         <li class="navv-item">

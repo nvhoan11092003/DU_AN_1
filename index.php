@@ -11,14 +11,14 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'trang_chu':
             include "view/home.php";
             break;
-        case 'value':
-            # code...
+        case 'dat_ban':
+            include "view/dat_ban.php";
             break;
-        case 'value':
-            # code...
+        case 'gioi_thieu':
+            include "view/gioi_thieu.php";
             break;
-        case 'value':
-            # code...
+        case 'thuc_don':
+            include "view/thuc_don.php";
             break;
         case 'dangnhap':
             include "view/taikhoan/dangnhap.php";
