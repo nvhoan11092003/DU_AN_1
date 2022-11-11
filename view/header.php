@@ -36,14 +36,12 @@
                         <li class="navv-item"><a class="navv-item-link" href="">Tin tức</a></li>
                         <li class="navv-item"><a class="navv-item-link" href="">Liên hệ</a></li>
                         <li class="navv-item">
-                        <a class="navv-item-link" href="" class="arrow"><i class="fa-solid fa-caret-down"></i></a>
-                            <ul class="sub-navv">
-                                
+                        <a class="navv-item-link" href="" class="arrow">Đăng Nhập<i class="fa-solid fa-caret-down"></i></a>
+                            <ul class="sub-navv">   
                                 <li class="sub-navv-item"><a href="index.php?act=dangnhap" class="sub-navv-link">Đăng nhập</a></li>
                                 <li class="sub-navv-item"><a href="" class="sub-navv-link">Đăng ký</a></li>
                                 <li class="sub-navv-item"><a href="" class="sub-navv-link">Cập nhật tài khoản</a></li>    
                             </ul>
-
                         </li>
                         <li class="navv-item"><a href="" class="hotline">Hotline: 0984966806</a></li>
 
