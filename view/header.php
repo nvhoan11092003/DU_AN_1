@@ -39,7 +39,8 @@
                         <a class="navv-item-link" href="" class="arrow">Đăng Nhập<i class="fa-solid fa-caret-down"></i></a>
                             <ul class="sub-navv">   
                                 <li class="sub-navv-item"><a href="index.php?act=dangnhap" class="sub-navv-link">Đăng nhập</a></li>
-                                <li class="sub-navv-item"><a href="" class="sub-navv-link">Đăng ký</a></li>
+                                <li class="sub-navv-item"><a href="index.php?act=dangky" class="sub-navv-link">Đăng ký</a></li>
+                                <li class="sub-navv-item"><a href="view/taikhoan/dangxuat.php" class="sub-navv-link">Đăng Xuất</a></li>
                                 <li class="sub-navv-item"><a href="" class="sub-navv-link">Cập nhật tài khoản</a></li>    
                             </ul>
                         </li>

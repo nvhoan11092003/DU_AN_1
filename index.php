@@ -1,7 +1,10 @@
 <?php
 ob_start();
+// khởi tạo SESSION
+session_start();
+var_dump($_SESSION['user']);
 include "model/pdo.php";
-
+include "model/taikhoan.php";
 
 // header
 include "view/header.php";
@@ -23,10 +26,10 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'dangnhap':
             include "view/taikhoan/dangnhap.php";
             break;
-        case 'value':
-            # code...
+        case 'dangky':
+            include "view/taikhoan/dangky.php";
             break;
-        case 'value':
+        case '':
             # code...
             break;
         case 'value':
