@@ -11,7 +11,7 @@
 
                     <div class="row mb10">
                         Tên loại<br>
-                        <input type="text" name="tenloai">
+                        <input type="text" name="tenloai"required>
                     </div>
 
                     <div class="row mb10">

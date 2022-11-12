@@ -19,22 +19,22 @@
 
                     <div class="row mb10">
                         Tên món ăn <br>
-                        <input type="text" name="tensp">
+                        <input type="text" name="tensp" required>
                     </div>
 
                     <div class="row mb10">
                         Giá<br>
-                        <input type="text" name="giasp">
+                        <input type="text" name="giasp" required>
                     </div>
 
                     <div class="row mb10">
                         Hình ảnh<br>
-                        <input type="file" name="hinh" id="">
+                        <input type="file" name="hinh" id="" required>
                     </div>
 
                     <div class="row mb10">
                         Mô tả<br>
-                        <textarea name="mota" cols="30" rows="10"></textarea>
+                        <textarea name="mota" cols="30" rows="10" required></textarea>
                     </div>
 
 

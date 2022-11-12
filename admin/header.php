@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
     <link rel="stylesheet" href="../view/css/style.css">
+    <link rel="stylesheet" href="../view/fonts/BerkshireSwash-Regular.ttf">
+    <link rel="stylesheet" href="../view/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -21,6 +26,7 @@
                 <li><a href="index.php?act=adddm">Danh Mục</a></li>
                 <li><a href="index.php?act=addsp">Món Ăn</a></li>
                 <li><a href="index.php?act=dskh">Khách Hàng</a></li>
+                <li><a href="index.php?act=thongke">Thống Kê</a></li>
             </ul>
 </div>
 <div class="">

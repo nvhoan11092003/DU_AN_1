@@ -48,7 +48,7 @@
 
                     <div class="row mb10">
                         Mô tả<br>
-                        <textarea name="mota" cols="30" rows="10"><?=$mota?></textarea>
+                        <textarea name="mota" cols="80" rows="10"><?=$mota?></textarea>
                     </div>
 
                     <div class="row mb10">

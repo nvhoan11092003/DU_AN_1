@@ -3,6 +3,7 @@
     include "header.php";
     include "../model/danhmuc.php";
     include "../model/sanpham.php";
+    include "../model/thongke.php";
 
 
     if(isset($_GET['act'])){ 
@@ -117,7 +118,18 @@
                 $listdanhmuc=loadall_danhmuc();
                 $listsanpham=loadall_sanpham();
                 include "sanpham/list.php";
+                break;
+
+            case'thongke':
+                $listthongke=loadall_thongke();
+                include "thongke/list.php";
+                break;  
+                    
+            case'bieudo':
+                $listthongke=loadall_thongke();
+                include "thongke/bieudo.php";
                 break;    
+                
             
             default:
                 include "home.php";
