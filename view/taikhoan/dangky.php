@@ -59,10 +59,10 @@ if (isset($_POST['submit']) && $_POST['submit'] != "") {
 
 
 
-<div class="overflow-hidden block bg-gray-200">
-    <div class="mt-24 mx-auto w-10/12 grid grid-cols-2 border rounded-3xl overflow-auto bg-white">
-        <!-- form đăng KÝ -->
-        <form class="w-full opacity-90 my-10 flex flex-col justify-center items-center " action="index.php?act=dangky" method="post">
+<div class="py-20 block bg-gray-100">
+    <div class="mx-auto grid1 grid-cols-2 wide w-10/12  border rounded-3xl overflow-hidden bg-white " >
+            <!-- form đăng KÝ -->
+        <form class=" opacity-90 my-10 flex flex-col justify-center items-center " action="index.php?act=dangky" method="post">
             <h1 class="p-4 w-full text-4xl text-center text-black ">Đăng ký</h1>
             <!-- email -->
             <input class="w-[350px] text-2xl p-4 text-black my-5 border border-gray-500 rounded-2xl" type="text" placeholder="Email" name="email" value="<?= isset($email)  ? $email : "" ?>">
@@ -91,7 +91,8 @@ if (isset($_POST['submit']) && $_POST['submit'] != "") {
         </form>
         <!-- image -->
         <div class="">
-            <img class="h-full" src="view/image/slider01.jpg" alt="">
+            <img class="h-full " src="view/image/slider01.jpg" alt="">
         </div>
+        
     </div>
 </div>

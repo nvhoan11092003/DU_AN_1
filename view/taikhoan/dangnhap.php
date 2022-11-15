@@ -24,8 +24,8 @@ if (isset($_POST['submit']) && $_POST['submit'] != "") {
 
 ?>
 
-<div class="overflow-hidden block bg-gray-200">
-    <div class="mt-24 mx-auto w-10/12 grid grid-cols-2 border rounded-3xl overflow-auto bg-white">
+<div class="py-20 block bg-gray-100">
+    <div class=" mx-auto w-10/12 grid1 grid-cols-2 border rounded-3xl overflow-auto  bg-white">
         <!-- form đăng nhập -->
         <form class="w-full opacity-90 my-10 flex flex-col justify-center items-center " action="index.php?act=dangnhap" method="post">
             <h1 class="p-4 w-full text-4xl text-center text-black ">Đăng Nhập</h1>
@@ -42,8 +42,9 @@ if (isset($_POST['submit']) && $_POST['submit'] != "") {
             </div>
             <a class="w-[350px] mb-5 flex-none flex justify-end hover:text-blue-500 text-black hover:no-underline" href="index.php?act=dangky">Tạo Tài Khoản</a>
             <input class="text-2xl p-4 mb-[15px] w-[350px] text-white bg-black rounded-2xl delay-100 hover:bg-blue-500" type="submit" name="submit" value="Đăng Nhập">
-            <a class="text-2xl  bg-stone-100 mb-[40px] w-[350px] border border-gray-500 rounded-2xl hover:no-underline flex justify-center items-center gap-x-1" href="#"><img src="view/image/logo-gg.jpg" class="h-[30px]" alt="">
-                <p class="py-4 hover:text-red-500 text-black">Đăng Nhập Với Google</p>
+            <a class="text-2xl p-1 bg-stone-100 mb-[40px] w-[350px] border border-gray-500 rounded-2xl hover:no-underline flex justify-center items-center gap-x-1" href="#">
+                <img src="view/image/logo-gg.jpg" class="h-[30px]" alt="">
+                <p class=" hover:text-red-500 text-black my-auto">Đăng Nhập Với Google</p>
             </a>
         </form>
         <!-- image -->
@@ -51,4 +52,5 @@ if (isset($_POST['submit']) && $_POST['submit'] != "") {
             <img class="h-full" src="view/image/slider01.jpg" alt="">
         </div>
     </div>
+
 </div>
