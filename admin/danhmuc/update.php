@@ -11,7 +11,7 @@
                 <h1>CẬP NHẬT LOẠI HÀNG HÓA</h1>
             </div>
             <div class="row frmcontent">
-                <form action="index.php?act=updatedm" method="post">
+                <form action="index.php?act=updatedm" method="post" enctype="multipart/form-data">
                     <div class="row mb20">
                         Mã loại<br>
                         <input type="text" name="maloai" disabled placeholder="auto number">
@@ -20,6 +20,11 @@
                     <div class="row mb10">
                         Tên loại<br>
                         <input type="text" name="tenloai" value="<?php if(isset($name)&&($name!="")) echo $name; ?>">
+                    </div>
+
+                    <div class="row mb10">
+                        Hình ảnh<br>
+                        <input type="file" name="hinh" id="" required>
                     </div>
 
                     <div class="row mb10">

@@ -1,6 +1,8 @@
 <?php
 ob_start();
 include "model/pdo.php";
+include "model/danhmuc.php";
+include "model/sanpham.php";
 
 
 // header
@@ -18,6 +20,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "view/gioi_thieu.php";
             break;
         case 'thuc_don':
+            $listdanhmuc = loadall_danhmuc();
             include "view/thuc_don.php";
             break;
         case 'dangnhap':
