@@ -7,7 +7,7 @@
     <a href="#" class="menu-link">Combo xèo xèo</a>
 </div>
 <div class="grid wide">
-    <div class="row border">
+    <div class="row border1">
         <div class="col l-12">
             <div class="list-menu">
                 <em>* Áp dụng cho tất cả các ngày trong tuần</em>

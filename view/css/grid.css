@@ -1,3 +1,7 @@
+.grid1{
+display: grid;
+}
+
 .grid {
     width: 100%;
     display: block;
