@@ -3,6 +3,7 @@
     include "header.php";
     include "../model/danhmuc.php";
     include "../model/sanpham.php";
+    include "../model/thongke.php";
 
 
     if(isset($_GET['act'])){ 
@@ -11,7 +12,15 @@
             case'adddm':
                 if(isset($_POST['themmoi'])&&($_POST['themmoi'])){ 
                     $tenloai =$_POST ['tenloai'];
-                    insert_danhmuc($tenloai);
+                    $hinh =$_FILES ['hinh']['name'];
+                    $target_dir ="../upload/";
+                    $target_file = $target_dir. basename($_FILES["hinh"]["name"]);
+                    if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
+                        //echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                    } else {
+                        //echo "Sorry, there was an error uploading your file.";
+                    }
+                    insert_danhmuc($tenloai,$hinh);
                     $thongbao="Thêm thành công !";
                 }
                 include "danhmuc/add.php";
@@ -37,7 +46,15 @@
                 if(isset($_POST['capnhat'])&&($_POST['capnhat'])){
                     $tenloai = $_POST['tenloai'];
                     $id = $_POST['id'];
-                    update_danhmuc($id,$tenloai);
+                    $hinh =$_FILES['hinh']['name'];
+                    $target_dir="../upload/";
+                    $target_file= $target_dir.basename($_FILES["hinh"]["name"]);
+                    if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
+                        
+                    } else {
+                        echo "Sorry, there was an error uploading your file.";
+                    }
+                    update_danhmuc($id,$tenloai,$hinh);
                     $thongbao = "Cập nhật thành công !";
                 }
                 $listdanhmuc=loadall_danhmuc();
@@ -117,7 +134,18 @@
                 $listdanhmuc=loadall_danhmuc();
                 $listsanpham=loadall_sanpham();
                 include "sanpham/list.php";
+                break;
+
+            case'thongke':
+                $listthongke=loadall_thongke();
+                include "thongke/list.php";
+                break;  
+                    
+            case'bieudo':
+                $listthongke=loadall_thongke();
+                include "thongke/bieudo.php";
                 break;    
+                
             
             default:
                 include "home.php";
