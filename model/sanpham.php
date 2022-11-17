@@ -55,6 +55,14 @@ function load_sanpham_cungloai($id,$iddm){
     return $listsanpham;
 }
 
+function loadall_sanpham_cungloai($iddm){
+    $sql ="select * from  products where iddm = ".$iddm."  order by id desc limit 0,9" ;
+    $listsanpham=pdo_query($sql);
+    return $listsanpham;
+}
+
+
+
 function update_sanpham($tensp,$giasp,$mota,$hinh,$id,$iddm){
     if($hinh!="")
         $sql ="update products  set iddm ='".$iddm."',  name ='".$tensp."',price ='".$giasp."',mota ='".$mota."',img ='".$hinh."' where id=".$id;

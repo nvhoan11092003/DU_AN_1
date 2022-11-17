@@ -400,10 +400,10 @@
 }
 
 .set-table {
-    margin-top: 50px;
+    
     position: relative;
-    background-repeat: no-repeat;
     background: url('../image/banner-234.jpg');
+    background-repeat: no-repeat!important;
 }
 
 .set-table::after {
@@ -613,6 +613,7 @@
 .border1{
     border: 1px solid #ddd;
     margin-bottom: 50px;
+    border-radius: 2px;
 }
 
 .list-menu {

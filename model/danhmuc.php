@@ -1,7 +1,7 @@
 <?php
 
-function insert_danhmuc($tenloai){
-    $sql = "insert into categories(name) values('$tenloai')";
+function insert_danhmuc($tenloai,$hinh){
+    $sql = "insert into categories(name,img) values('$tenloai','$hinh')";
     pdo_execute($sql);
 }
 
@@ -22,8 +22,8 @@ function loadone_danhmuc($id){
     return $dm;
 }
 
-function update_danhmuc($id,$tenloai){
-    $sql ="update categories set name ='".$tenloai."' where id=".$id;
+function update_danhmuc($id,$tenloai,$hinh){
+    $sql ="update categories set name ='".$tenloai."',img ='".$hinh."' where id=".$id;
      pdo_execute($sql);
 }
 

@@ -4,6 +4,8 @@ ob_start();
 session_start();
 var_dump($_SESSION['user']);
 include "model/pdo.php";
+include "model/danhmuc.php";
+include "model/sanpham.php";
 include "model/taikhoan.php";
 include "model/lienhe.php";
 // header
@@ -21,6 +23,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "view/gioi_thieu.php";
             break;
         case 'thuc_don':
+            $listdanhmuc = loadall_danhmuc();
             include "view/thuc_don.php";
             break;
         case 'dangnhap':
