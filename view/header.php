@@ -35,7 +35,7 @@
                         <li class="navv-item"><a class="navv-item-link" href="index.php?act=dat_ban">Đặt bàn</a></li>
                         <li class="navv-item"><a class="navv-item-link" href="index.php?act=thuc_don">Thực đơn</a></li>
                         <li class="navv-item"><a class="navv-item-link" href="">Tin tức</a></li>
-                        <li class="navv-item"><a class="navv-item-link" href="">Liên hệ</a></li>
+                        <li class="navv-item"><a class="navv-item-link" href="index.php?act=lienhe">Liên hệ</a></li>
                         <li class="navv-item">
                         <a class="navv-item-link" href="" class="arrow">Đăng Nhập<i class="fa-solid fa-caret-down"></i></a>
                             <ul class="sub-navv">   
