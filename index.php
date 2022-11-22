@@ -2,7 +2,6 @@
 ob_start();
 // khởi tạo SESSION
 session_start();
-var_dump($_SESSION['user']);
 include "model/pdo.php";
 include "model/danhmuc.php";
 include "model/sanpham.php";
