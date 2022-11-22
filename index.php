@@ -6,7 +6,7 @@ include "model/pdo.php";
 include "model/danhmuc.php";
 include "model/sanpham.php";
 include "model/taikhoan.php";
-
+include "model/lienhe.php";
 // header
 include "view/header.php";
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
@@ -31,8 +31,8 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'dangky':
             include "view/taikhoan/dangky.php";
             break;
-        case '':
-            # code...
+        case 'lienhe':
+            include "view/lienhe.php";
             break;
         case 'value':
             # code...

@@ -51,12 +51,12 @@
 </div>
 <script>
     var active = document.getElementsByClassName("menu-link");
-   active[0].onclick=function(){
-    active[0].classList.add('active');
-    active[1].classList.remove('active');
-   }
-   active[1].onclick=function(){
-    active[1].classList.add('active');
-    active[0].classList.remove('active');
-   }
+    active[0].onclick = function() {
+        active[0].classList.add('active');
+        active[1].classList.remove('active');
+    }
+    active[1].onclick = function() {
+        active[1].classList.add('active');
+        active[0].classList.remove('active');
+    }
 </script>

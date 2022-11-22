@@ -182,10 +182,10 @@
                 </div>
             </div>
         </div>
-        <div class="set-table">
+        <div class="set-table mt-20">
             <div class="grid wide z-ind-2">
                 <div class="row ">
-                    <div class="col l-6 mt-20 z-ind-2">
+                    <div class="col l-6  z-ind-2">
                         <h1 class="title white" style="padding-top: 10px;">Set Table</h1>
                         <p class="text-content f-w white">Quý khách vui lòng đặt bàn trước để có trải nghiệm thưởng thức
                             ẩm thực tốt nhất tại Sun Homes BBQ.</p>
@@ -203,7 +203,7 @@
                                 nhóm >12 người: gọi trực tiếp Hotline: 0909.009.009</li>
                         </ul>
                     </div>
-                    <div class="col l-6 mt-20 z-ind-2">
+                    <div class="col l-6  z-ind-2">
                         <form action="">
                             <input type="text" class="set-order-text" placeholder="Tên của bạn...">
                             <input type="text" class="set-order-text" placeholder="Số điện thoại...">

@@ -10,6 +10,7 @@ if (isset($_POST['submit']) && $_POST['submit'] != "") {
             $dangky = false;
         }
     }
+    
     // check email không được để trống
     if ($email == "") {
         $error_email = "Trường Này Không Được Để trống";
@@ -91,7 +92,7 @@ if (isset($_POST['submit']) && $_POST['submit'] != "") {
         </form>
         <!-- image -->
         <div class="">
-            <img class="h-full " src="view/image/slider01.jpg" alt="">
+            <img class="h-full "  src="view/image/slider01.jpg" alt="">
         </div>
         
     </div>
