@@ -1,12 +1,8 @@
-@font-face {
-    font-family: uppercase;
-    src: url(../fonts/BerkshireSwash-Regular.ttf);
-}
 
 * {
     box-sizing: border-box;
     font-size: 0.8vw;
-    font-family:'Roboto', sans-serif;
+    font-family: sans-serif;
 
 }
 
