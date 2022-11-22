@@ -1,16 +1,20 @@
+<?php
+extract($sp_chitiet);
+$img = $img_path . $img;
+?>
 <div class="detail-product">
     <div class="grid wide">
         <form action="" class="row">
             <div class="col l-6">
                 <div class="detai-imgs">
-                    <img src="view/image/1-11-2014-6-05-19-PM.jpg" alt="" class="detail-img">
+                    <img src="<?=$img?>" alt="" class="detail-img">
                 </div>
             </div>
             <div class="col l-6">
                 <h1 class="detail-name">
-                    Lõi vai bò Angus thượng hạng ( 200gr ) - D
+                    <?=$name?>
                 </h1>
-                <h2 class="detail-price">199,000 đ</h2>
+                <h2 class="detail-price"><?=$price?></h2>
                 <p class="detail-desc"></p>
                 <input type="number" name="" min="1" class="detail-count" value="1">
                 <input type="submit" name="" class="detail-add-cart" value="Thêm vào giỏ hàng">

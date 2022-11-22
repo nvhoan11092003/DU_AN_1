@@ -7,6 +7,7 @@ include "model/danhmuc.php";
 include "model/sanpham.php";
 include "model/taikhoan.php";
 include "model/datban.php";
+include "global.php";
 
 
 
@@ -54,6 +55,8 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             break;
 
         case 'chitiet_sp':
+            $id = $_GET['id'];
+            $sp_chitiet = loadone_sanpham($id);
             include "view/chitiet_sp.php";
             break;
         case 'viewcart':

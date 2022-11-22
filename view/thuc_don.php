@@ -2,9 +2,9 @@
 <div class="banner"><img src="view/image/banner-234.jpg" alt="" class="banner-img"></div>
 <h1 class="menu-title">THỰC ĐƠN TẠI HÀ NỘI</h1>
 <div class="list-menu-link">
-    <a href="#" class="menu-link active">Chọn món nướng</a>
+    <a href="#" class="menu-link active">Menu</a>
     <div class="center"></div>
-    <a href="index.php?" class="menu-link">Combo xèo xèo</a>
+    <a href="index.php?" class="menu-link">Đặt Món</a>
 </div>
 <div class="grid wide">
     <div class="row border1">
@@ -28,7 +28,7 @@
                             foreach ($listsanpham as $key => $value){
                             extract($value);
 
-                        echo'<li class="category-item"><i class=" check-icon fa-sharp fa-solid fa-check"></i><a href="" class="category-item-link"></a>'.$name.'</li>';
+                        echo'<li class="category-item"><i class=" check-icon fa-sharp fa-solid fa-check"></i><a href="index.php?act=chitiet_sp&id='.$id.'" class="category-item-link">'.$name.'</a></li>';
                         }
 
                         echo '
