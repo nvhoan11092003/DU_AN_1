@@ -11,7 +11,7 @@
                         </div>
                         <div class="footer-right">
                             <p class="footer-content">© 2011 Tam Nguyên Media ., JSC. All rights reserved</p>
-                            <img src="image/bct.png" alt="" class="regonize">
+                            <img src="view/image/bct.png" alt="" class="regonize">
                            </div>
                     </div>
                 </div>

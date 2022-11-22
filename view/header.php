@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-     <!-- tailwind -->
+    <!-- tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -19,8 +19,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
-   
-    
+
+
 </head>
 
 <body>
@@ -28,7 +28,7 @@
         <div class="header">
             <div class="grid wide">
                 <div class="header-control">
-                    <a href="index.php"><img src="view/image/logo-Sunhomes-BBQ-01.png" alt="" class="logo height-center"></a> 
+                    <a href="index.php"><img src="view/image/logo-Sunhomes-BBQ-01.png" alt="" class="logo height-center"></a>
                     <ul class="navv height-center">
                         <li class="navv-item"><a class="navv-item-link" href="index.php">Trang chủ</a></li>
                         <li class="navv-item"><a class="navv-item-link" href="index.php?act=gioi_thieu">Giới thiệu</a></li>
@@ -36,17 +36,30 @@
                         <li class="navv-item"><a class="navv-item-link" href="index.php?act=thuc_don">Thực đơn</a></li>
                         <li class="navv-item"><a class="navv-item-link" href="">Tin tức</a></li>
                         <li class="navv-item"><a class="navv-item-link" href="">Liên hệ</a></li>
-                        <li class="navv-item">
-                        <a class="navv-item-link" href="" class="arrow">Đăng Nhập<i class="fa-solid fa-caret-down"></i></a>
-                            <ul class="sub-navv">   
-                                <li class="sub-navv-item"><a href="index.php?act=dangnhap" class="sub-navv-link">Đăng nhập</a></li>
-                                <li class="sub-navv-item"><a href="index.php?act=dangky" class="sub-navv-link">Đăng ký</a></li>
-                                <li class="sub-navv-item"><a href="view/taikhoan/dangxuat.php" class="sub-navv-link">Đăng Xuất</a></li>
-                                <li class="sub-navv-item"><a href="" class="sub-navv-link">Cập nhật tài khoản</a></li>    
-                            </ul>
+                        <li class="navv-item"><a class="navv-item-link" href=""><i class="nav-icon fa-solid fa-cart-shopping"></i></a>
+                        
                         </li>
-                        <li class="navv-item"><a href="" class="hotline">Hotline: 0984966806</a></li>
+                        <?php
+                        if (isset($_SESSION['user'])) {
+                            extract($_SESSION['user']);
 
+                        ?>
+                            <li class="navv-item">
+                                <a class="navv-item-link" href="index.php?act=dangnhap" class="arrow"><i class="nav-icon fa-solid fa-caret-down"></i></a>
+                                <ul class="sub-navv">
+                                    <li class="sub-navv-item"><a href="view/taikhoan/dangxuat.php" class="sub-navv-link">Đăng Xuất</a></li>
+                                    <li class="sub-navv-item"><a href="" class="sub-navv-link">Cập nhật tài khoản</a></li>
+                                    <?php if ($rol == 0) { ?>
+                                        <li class="sub-navv-item"><a href="admin/index.php" class="sub-navv-link">Đi tới trang quản trị</a></li>
+                                    <?php } ?>
+                                </ul>
+                            </li>
+                        <?php } else { ?>
+                            <li class="navv-item"><a class="navv-item-link" href="index.php?act=dangnhap"><i class="nav-icon fa-solid fa-right-to-bracket"></i></a></li>
+                            <li class="navv-item"><a class="navv-item-link" href="index.php?act=dangky">Đăng ký</a></li>
+                        <?php } ?>
+
+                        <li class="navv-item"><a href="" class="hotline">Hotline: 0984966806</a></li>
                     </ul>
                 </div>
             </div>

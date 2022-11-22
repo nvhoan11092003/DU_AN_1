@@ -4,7 +4,7 @@
 <div class="list-menu-link">
     <a href="#" class="menu-link active">Chọn món nướng</a>
     <div class="center"></div>
-    <a href="#" class="menu-link">Combo xèo xèo</a>
+    <a href="index.php?" class="menu-link">Combo xèo xèo</a>
 </div>
 <div class="grid wide">
     <div class="row border1">

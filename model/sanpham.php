@@ -71,6 +71,10 @@ function update_sanpham($tensp,$giasp,$mota,$hinh,$id,$iddm){
     pdo_execute($sql);
 }
 
+function sanpham_view($id){
+    $sql = "UPDATE products SET view = view + 1 WHERE id = $id";
+    pdo_execute($sql);
+}
 
 
 ?>

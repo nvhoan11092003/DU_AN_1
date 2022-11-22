@@ -321,7 +321,7 @@
                                 </span>
 
                             </div>
-                            <input type="button" name="" value="ĐẶt bàn" class="care-btn">
+                            <input type="submit" name="" value="ĐẶt bàn" class="care-btn">
                         </form>
                     </div>
                 </div>

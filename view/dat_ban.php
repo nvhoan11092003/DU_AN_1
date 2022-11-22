@@ -20,12 +20,20 @@
                         </ul>
                     </div>
                     <div class="col l-6 mt-20 z-ind-2">
-                        <form action="">
-                            <input type="text" class="set-order-text" placeholder="Tên của bạn...">
-                            <input type="text" class="set-order-text" placeholder="Số điện thoại...">
-                            <input type="text" class="set-order-text" placeholder="Số người ăn...">
-                            <input type="date" class="set-order-text" >
-
+                        
+                        
+                        <?php 
+                        if (!(empty($errors))) {
+                            echo '<span class="error">'.$errors.'</span>';
+                        }else{
+                            echo '<span class="success">'.$success.'</span>';
+                        }
+                        ?>
+                        <form action="index.php?act=dat_ban" method="POST" enctype="multipart/form-data">
+                            <input type="text" class="set-order-text" name="name" placeholder="Tên của bạn...">
+                            <input type="text" class="set-order-text" name="tel" placeholder="Số điện thoại...">
+                            <input type="number" class="set-order-text" name="number_people" placeholder="Số người ăn..." min="1">
+                            <input type="date" class="set-order-text" name="date" min="<?php echo date("Y-m-d")?>">
                             <div class="list-check-box">
                                 <span class="checkbox-item">
                                     <input type="checkbox" name="time" id="08:30" value="08:30">
@@ -137,7 +145,7 @@
                                 </span>
 
                             </div>
-                            <input type="button" name="" value="ĐẶt bàn" class="care-btn">
+                            <input type="submit" name="datban" value="ĐẶt bàn" class="care-btn">
                         </form>
                     </div>
                 </div>

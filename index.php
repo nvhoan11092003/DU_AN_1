@@ -2,11 +2,12 @@
 ob_start();
 // khởi tạo SESSION
 session_start();
-var_dump($_SESSION['user']);
 include "model/pdo.php";
 include "model/danhmuc.php";
 include "model/sanpham.php";
 include "model/taikhoan.php";
+include "model/datban.php";
+
 
 // header
 include "view/header.php";
@@ -17,6 +18,22 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "view/home.php";
             break;
         case 'dat_ban':
+            $errors = "";
+            $success = "";
+            if (isset($_POST['datban']) && $_POST['datban']) {
+                $name = $_POST['name'];
+                $tel = $_POST['tel'];
+                $number_people = $_POST['number_people'];
+                $date = $_POST['date'];
+                $time = $_POST['time'];
+                if (empty($name) || empty($tel) || empty($date) || empty($time)) {
+                    $errors = "Dữ liệu không được để trống";
+                } else {
+                    $errors = "";
+                    $success = "Đặt bàn thành công";
+                    insert_datban($name,$tel,$number_people,$date,$time);
+                }
+            }
             include "view/dat_ban.php";
             break;
         case 'gioi_thieu':
@@ -32,7 +49,16 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'dangky':
             include "view/taikhoan/dangky.php";
             break;
-        case '':
+        case 'chitiet_sp':
+            include "view/chitiet_sp.php";
+            break;
+        case 'viewcart':
+            include "view/cart/viewcart.php";
+            break;
+        case 'value':
+            # code...
+            break;
+        case 'value':
             # code...
             break;
         case 'value':
@@ -45,7 +71,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             # code...
             break;
     }
-}else{
+} else {
     include "view/home.php";
 }
 // footer
