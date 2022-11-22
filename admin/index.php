@@ -4,8 +4,8 @@
     include "../model/danhmuc.php";
     include "../model/sanpham.php";
     include "../model/thongke.php";
-
-
+    include "../model/taikhoan.php";
+    include "../model/lienhe.php";
     if(isset($_GET['act'])){ 
         $act=$_GET['act'];
         switch($act) {
@@ -145,8 +145,9 @@
                 $listthongke=loadall_thongke();
                 include "thongke/bieudo.php";
                 break;    
-                
-            
+            case'dskh':
+                include "taikhoan/list.php";
+                break;
             default:
                 include "home.php";
                 break;  

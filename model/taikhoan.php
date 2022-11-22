@@ -1,4 +1,5 @@
 <?php 
+require_once "pdo.php";
 // suất tất cả user
 function loadall_user(){
     $sql = "SELECT * FROM users";  
@@ -18,6 +19,12 @@ function loadone_user($id)
     $sql = "SELECT * FROM users WHERE id = '$id'";
     $user = pdo_query_one($sql);
     return $user;
+}
+
+function delete_user($id)
+{
+    $sql = "DELETE FROM users WHERE  id = $id";
+    pdo_execute($sql);
 }
 
 
