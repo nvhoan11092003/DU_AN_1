@@ -585,7 +585,9 @@
     text-decoration: none !important;
     color: rgba(17, 17, 17, 0.85);
     font-size: 1.3rem;
-    padding: 10px 15px;
+    padding: 10px 0px;
+    text-align: center  ;
+    min-width: 140px;
     border-top: 2px solid #ddd;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
@@ -856,9 +858,12 @@ line-height: 44px;
     font-size: 1.6rem;
     font-weight: 600;
     text-transform: uppercase;
-    padding: 10px 30px; 
+    padding: 10px 55px; 
     border-radius: 99px;
+    text-align: center;
+    margin-right: 10px;
 }
+.update-input:hover,
 .total-link:hover{
     text-decoration: none;
     color: #fff;
@@ -924,4 +929,25 @@ margin-top: 40px;
     color: #0a0a0a;
     font-weight: 500;
     border-radius: 2px;
+}
+
+.update-cart{
+    text-align: right;
+    background-color: #f9f9f9;
+    margin-bottom: 30px;
+}
+
+.update-input{
+    background-color: #292929 !important;
+    color: #fff;
+    
+    font-size: 1.8rem;
+    
+    padding: 9px 24px;
+    display: inline-block;
+    border-radius: 99px;
+    max-width: 226px;
+    text-align: center;
+    
+    margin: 20px 10px 20px 0px;
 }

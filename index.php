@@ -7,9 +7,12 @@ include "model/danhmuc.php";
 include "model/sanpham.php";
 include "model/taikhoan.php";
 include "model/datban.php";
+include "model/cart.php";
 include "global.php";
 
-
+if (!isset($_SESSION['mycart'])) {
+    $_SESSION['mycart'] = [];
+}
 
 include "model/lienhe.php";
 
@@ -35,7 +38,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 } else {
                     $errors = "";
                     $success = "Đặt bàn thành công";
-                    insert_datban($name,$tel,$number_people,$date,$time);
+                    insert_datban($name, $tel, $number_people, $date, $time);
                 }
             }
             include "view/dat_ban.php";
@@ -57,6 +60,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'chitiet_sp':
             $id = $_GET['id'];
             $sp_chitiet = loadone_sanpham($id);
+            sanpham_view($id);
             include "view/chitiet_sp.php";
             break;
         case 'viewcart':
@@ -72,10 +76,30 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "view/lienhe.php";
 
             break;
-        case 'value':
-            # code...
+        case 'addtocart':
+            if (isset($_POST['addtocart']) && ($_POST['addtocart'])) {
+                $id = $_POST['id'];
+                $name = $_POST['name'];
+                $img = $_POST['img'];
+                $price = $_POST['price'];
+                $amount = $_POST['amount'];
+                $totalPrice = $price * $amount;
+                $addCart = [$id, $name, $img, $price, $amount, $totalPrice];
+                array_push($_SESSION['mycart'], $addCart);
+            }
             break;
-        case 'value':
+        case 'delcart':
+            if (isset($_GET['idcart'])) {
+                array_splice($_SESSION['mycart'], $_GET['idcart'], 1);
+            } else {
+                $_SESSION['mycart'] = [];
+            }
+            header('location: index.php?act=viewcart');
+            break;
+        case 'update_cart':
+            var_dump($_POST['img']);die;
+            break;
+        case 'bill':
             # code...
             break;
         default:
