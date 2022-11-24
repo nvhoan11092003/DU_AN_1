@@ -51,7 +51,7 @@
                                 <ul class="sub-navv">
                                     <li class="sub-navv-item"><a href="view/taikhoan/dangxuat.php" class="sub-navv-link">Đăng Xuất</a></li>
                                     <li class="sub-navv-item"><a href="" class="sub-navv-link">Cập nhật tài khoản</a></li>
-                                    <?php if ($rol == 0) { ?>
+                                    <?php if ($rol == 1) { ?>
                                         <li class="sub-navv-item"><a href="admin/index.php" class="sub-navv-link">Đi tới trang quản trị</a></li>
                                     <?php } ?>
                                 </ul>

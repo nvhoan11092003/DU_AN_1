@@ -4,7 +4,7 @@ $img = $img_path . $img;
 ?>
 <div class="detail-product">
     <div class="grid wide">
-        <form action="" class="row">
+        <form action="index.php?act=addtocart" class="row" method="POST" enctype="multipart/form-data">
             <div class="col l-6">
                 <div class="detai-imgs">
                     <img src="<?=$img?>" alt="" class="detail-img">
@@ -15,10 +15,14 @@ $img = $img_path . $img;
                     <?=$name?>
                 </h1>
                 <h2 class="detail-price"><?=$price?></h2>
-                <p class="detail-desc"></p>
-                <input type="number" name="" min="1" class="detail-count" value="1">
-                <input type="submit" name="" class="detail-add-cart" value="Thêm vào giỏ hàng">
-                <input type="text" class="detail-buy" value="Đặt ngay">
+                <p class="detail-desc"><?=$mota?></p>
+                <input type="text" name="name" value="<?=$name?>" hidden>
+                <input type="text" name="id" value="<?=$id?>" hidden>
+                <input type="text" name="img" value="<?=$img?>" hidden>
+                <input type="text" name="price" value="<?=$price?>" hidden>
+                <input type="number" name="amount" min="1" class="detail-count" value="1">
+                <input type="submit" name="addtocart" class="detail-add-cart" value="Thêm vào giỏ hàng">
+                <!-- <input type="text" class="detail-buy" value="Đặt ngay"> -->
             </div>
         </form>
         <h4 class="product-other-title">Các sản phẩm cùng loại</h2>

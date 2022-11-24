@@ -2,9 +2,10 @@
 <div style="margin-top: 60px;" class="grid wide">
     <div class="row">
         <div class="col l-12">
-            <form action="" method="post">
-                <table class="table table-bordered text-center">
+            <form action="index.php?act=update_cart" method="POST" enctype="multipart/form-data">
+                <!-- <table class="table table-bordered text-center">
                     <thead>
+                        <tr>
                             <th class="text-center">Sản phẩm</th>
                             <th class="text-center">Giá</th>
                             <th class="text-center">Số lượng</th>
@@ -29,7 +30,12 @@
                     <h3 class="total-title">Tổng tiền: <span>17888000</span></h3>
                     <a class="total-link" href="index.php?act=">Đặt hàng</a>
                 </div>
-            </form>
+            </form> -->
+            <!-- <div class="update-cart">
+
+                <input class="update-input" type="submit" name = "update_cart" value="Cập nhật giỏ hàng">
+            </div> -->
+            <?php viewcart(1);?>
         </div>
     </div>
 </div>
