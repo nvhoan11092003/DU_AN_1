@@ -139,7 +139,14 @@
     margin-right: 20px;
 
 }
+.text-content1 {
+    font-size: 1.56rem;
+    line-height: 2rem;
+    font-weight: 500;
+    letter-spacing: normal;
+    margin-bottom: 10px;
 
+}
 .intro {
     overflow: hidden;
     max-width: 264px;
@@ -343,6 +350,7 @@
     padding: 0 16px;
     border: none;
     height: 40px;
+    max-width: 134px;
 }
 
 .care-btn:hover {
@@ -693,6 +701,18 @@ em {
 .success{
     color: rgb(20, 161, 39);
 }
+.detail-product{
+    margin-top: 50px;
+}
+.detai-imgs{
+
+}
+
+.detail-img{
+display: block;
+width: 100%;
+object-fit: cover;
+}
 .detail-name{
     font-weight: 700;
     font-family: uppercase;
@@ -758,10 +778,13 @@ max-width: 140px;
     margin-bottom: 30px;
 }
 .product-other{
-    
+    max-height: 180px;
+    overflow: hidden;
 }
 .other-img{
     text-align: center;
+    object-fit: cover;
+    vertical-align: middle;
 }
 .other-name{
     margin-top: 10px;

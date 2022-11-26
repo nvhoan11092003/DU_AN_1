@@ -36,7 +36,7 @@
                         <li class="navv-item"><a class="navv-item-link" href="index.php?act=thuc_don">Thực đơn</a></li>
                         <li class="navv-item"><a class="navv-item-link" href="">Tin tức</a></li>
                         <li class="navv-item"><a class="navv-item-link" href="index.php?act=lienhe">Liên hệ</a></li>
-                        <li class="navv-item"><a class="navv-item-link" href=""><i class="nav-icon fa-solid fa-cart-shopping"></i></a>
+                        <li class="navv-item"><a class="navv-item-link" href="index.php?act=viewcart"><i class="nav-icon fa-solid fa-cart-shopping"></i></a>
                         
 
 
