@@ -34,19 +34,20 @@ $img = $img_path . $img;
 
                     echo'
                     <div class="col l-3">
-                    <a href="" style="text-decoration: none;">
-                        <form action="" method="POST" enctype="multipart/form-data">
+                    <a href="index.php?act=chitiet_sp&id='.$id.'" style="text-decoration: none;">
+                        <form action="index.php?act=addtocart" method="POST" enctype="multipart/form-data">
                             <div class="product-other">
                                 <img src=upload/'.$img.' alt="" class="other-img">
                             </div>
                             <h5 class="other-name">'.$name.'</h5>
                             <h6 class="other-price">'.$price.'đ</h6>
-                            <input type="text" name="'.$id.'" hidden value="">
-                            <input type="text" name="'.$name.'" hidden value="">
-                            <input type="text" name="'.$price.'" hidden value="">
-                            <input type="text" name="'.$img.'" hidden value="">
-                            <input type="text" name="'.$mota.'" hidden value="">
-                            <input type="submit" value="Đặt ngay" class="submit-order">
+                            <input type="text" name="id" hidden value="'.$id.'">
+                            <input type="text" name="name" hidden value="'.$name.'">
+                            <input type="text" name="price" hidden value="'.$price.'">
+                            <input type="text" name="img" hidden value="'.$img.'">
+                            
+                            <input type="text" name="amount" hidden value="1">
+                            <input type="submit" value="Đặt ngay" name="addtocart" class="submit-order">
                         </form>
                     </a>
                 </div>
