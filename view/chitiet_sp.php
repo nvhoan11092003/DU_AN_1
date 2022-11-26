@@ -14,7 +14,7 @@ $img = $img_path . $img;
                 <h1 class="detail-name">
                     <?=$name?>
                 </h1>
-                <h2 class="detail-price"><?=$price?></h2>
+                <h2 class="detail-price"><?=$price?>đ</h2>
                 <p class="detail-desc"><?=$mota?></p>
                 <input type="text" name="name" value="<?=$name?>" hidden>
                 <input type="text" name="id" value="<?=$id?>" hidden>
