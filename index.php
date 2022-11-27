@@ -84,9 +84,14 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $price = $_POST['price'];
                 $amount = $_POST['amount'];
                 $totalPrice = $price * $amount;
-                $addCart = [$id, $name, $img, $price, $amount, $totalPrice];
+                
+
+
+
+                $addCart = [$id, $name, $img, $price, $amount , $totalPrice];
                 array_push($_SESSION['mycart'], $addCart);
             }
+            include "view/cart/viewcart.php";
             break;
         case 'delcart':
             if (isset($_GET['idcart'])) {
@@ -97,7 +102,20 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             header('location: index.php?act=viewcart');
             break;
         case 'update_cart':
-            var_dump($_POST['img']);die;
+              
+            $amount = $_POST['amount'];
+           
+            
+            
+
+            foreach ($_SESSION['mycart'] as $id => $value) {
+                $value['4'] = $amount[$value['0']];
+
+                $_SESSION['mycart'][$id]['4'] = $value['4'];
+             
+            }
+           
+            include "view/cart/viewcart.php";
             break;
         case 'bill':
             # code...

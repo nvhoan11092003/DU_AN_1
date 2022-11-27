@@ -10,6 +10,9 @@ function viewcart($del)
         $xoasp_th = '';
         $xoasp_td = '';
     }
+    // echo "<pre>";
+
+    // var_dump($_SESSION);die;
 
     echo '
     <table class="table table-bordered text-center">
@@ -24,7 +27,9 @@ function viewcart($del)
     </thead>
 ';
     echo '<tbody>';
+    
     foreach ($_SESSION['mycart'] as $cart) {
+        $id = $cart[0];
         $name = $cart[1];
         $price = $cart[3];
         $img = $cart[2];
@@ -41,10 +46,13 @@ function viewcart($del)
     <td class="cart-td"><div class="cart-product">
     <img class="cart-img" src="'.$img.'" alt="">
     <input type="text" name="img" hidden value="'.$img.'">
+    <input type="text" name="id" hidden value="'.$id.'">
+    <input type="text" name="name" hidden value="'.$name.'">
+    <input type="text" name="price" hidden value="'.$price.'">
     <span class="sp-td">'.$name.'</span>
     </div></td>
     <td class="cart-td"><span class="sp-td">'.$price.'</span></td>
-    <td class="cart-td"><input class="count"  type="number" min="1" value = "'.$amount.'"></td>
+    <td class="cart-td"><input class="count" name="amount['.$id.']"  type="number" min="1" value = "'.$amount.'"></td>
     <td class="cart-td" ><span class="sp-td" >'.$totalPrice.'</span></td>
     ' . $xoasp_td . '
     
