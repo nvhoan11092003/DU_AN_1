@@ -148,6 +148,21 @@
             case'dskh':
                 include "taikhoan/list.php";
                 break;
+            case'lienhe':
+                include "lienhe/list.php";
+                break;
+            case'':
+                include "";
+                break;
+            case'':
+                include "";
+                break; 
+            case'':
+                include "";
+                break;
+             case'':
+                include "";
+                break;                  
             default:
                 include "home.php";
                 break;  
