@@ -37,8 +37,8 @@ if (isset($_POST['submit'])) {
     }
 
     if ($lienhe) {
-        insert_contact($name,$email,$tel,$purpose,$description,$id);
-        $messenger="Bạn đã gửi thành công";
+        insert_contact($name, $email, $tel, $purpose, $description, $id);
+        $messenger = "Bạn đã gửi thành công";
         unset($purpose);
         unset($description);
     }
@@ -50,7 +50,9 @@ if (isset($_POST['submit'])) {
 
 ?>
 
-<h1 class="text-green-500 text-center"><?= isset($messenger) ? $messenger: ""; ?></h1>
+<div class="banner"><img src="view/image/banner-234.jpg" alt="" class="banner-img"></div>
+
+<h1 class="text-green-500 text-center"><?= isset($messenger) ? $messenger : ""; ?></h1>
 <div style="margin-top: 40px; margin-bottom: 100px;" class="grid1 grid-cols-2 w-10/12 mx-auto ">
     <!-- contact -->
     <div class="">

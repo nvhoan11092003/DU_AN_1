@@ -23,7 +23,7 @@ function loadone_user($id)
 
 function delete_user($id)
 {
-    $sql = "DELETE FROM users WHERE  id = $id";
+    $sql = "DELETE FROM users WHERE  id = '$id'";
     pdo_execute($sql);
 }
 
