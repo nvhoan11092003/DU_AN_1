@@ -778,13 +778,14 @@ max-width: 140px;
     margin-bottom: 30px;
 }
 .product-other{
-    max-height: 180px;
+    height: 150px;
     overflow: hidden;
 }
 .other-img{
     text-align: center;
     object-fit: cover;
-    vertical-align: middle;
+    display: inline-block;
+    
 }
 .other-name{
     margin-top: 10px;

@@ -118,7 +118,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "view/cart/viewcart.php";
             break;
         case 'bill':
-            # code...
+            include "view/cart/bill.php";
             break;
         default:
             # code...

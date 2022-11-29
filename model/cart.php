@@ -27,7 +27,7 @@ function viewcart($del)
     </thead>
 ';
     echo '<tbody>';
-    
+    $total = 0;
     foreach ($_SESSION['mycart'] as $cart) {
         $id = $cart[0];
         $name = $cart[1];
@@ -35,6 +35,8 @@ function viewcart($del)
         $img = $cart[2];
         $amount = $cart[4];
         $totalPrice = $price * $amount;
+        
+        $total += $totalPrice;
         if ($del = 1) {
             $xoasp_td = '<td class="cart-td"><a href="index.php?act=delcart&idcart=' . $i . '"><i class="cart-icon fa-solid fa-trash-can"></i></a></td>';
         } else {
@@ -73,7 +75,7 @@ function viewcart($del)
 
     echo '
 <div class="cart-totals">
-<h3 class="total-title">Tổng tiền: <span>1788800 vnđ</span></h3>
+<h3 class="total-title">Tổng tiền: <span>'.$total.' vnđ</span></h3>
 <a class="total-link" href="index.php?act=bill">Đặt hàng</a>
 </div>
 ';
