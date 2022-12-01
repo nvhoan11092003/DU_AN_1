@@ -27,5 +27,4 @@ function update_danhmuc($id,$tenloai,$hinh){
      pdo_execute($sql);
 }
 
-
 ?>

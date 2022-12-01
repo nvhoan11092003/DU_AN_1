@@ -2,6 +2,7 @@
     include "../model/pdo.php";
     include "header.php";
     include "../model/danhmuc.php";
+    include "../model/slider.php";
     include "../model/sanpham.php";
     include "../model/thongke.php";
     include "../model/taikhoan.php";
@@ -24,7 +25,7 @@
                     $thongbao="Thêm thành công !";
                 }
                 include "danhmuc/add.php";
-                break;
+                break; 
             case'lisdm':
                 $listdanhmuc=loadall_danhmuc();
                 include "danhmuc/list.php";
@@ -60,7 +61,58 @@
                 $listdanhmuc=loadall_danhmuc();
                 include "danhmuc/list.php";
                 break;
+            // controller slider
+            case'addslider':
+                if(isset($_POST['themmoi'])&&($_POST['themmoi'])){ 
+                    $hinh =$_FILES ['hinh']['name'];
+                    $target_dir ="../upload/";
+                    $target_file = $target_dir. basename($_FILES["hinh"]["name"]);
+                    if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
+                        //echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                    } else {
+                        //echo "Sorry, there was an error uploading your file.";
+                    }
+                    insert_anhbia($hinh);
+                    $thongbao="Thêm thành công !";
+                }
+                include "slider/add.php";
+                break;
+                case'xoabia':
+                    if(($_GET['id'])&&($_GET['id']>0)){
+                        delete_anhbia($_GET['id']);
+                    }
+                    $listanhbia=loadall_anhbia();
+                    include "slider/list.php";
+                    break;
+                case 'suabia':
+                    if(($_GET['id'])&&($_GET['id']>0)){
+                        $dm=loadone_anhbia($_GET['id']);
+                    }
+                    include "slider/update.php";
+                    break;   
+            
+                case'listslider':
+                    $listanhbia=loadall_anhbia();
+                    include "slider/list.php";
+                    break;
 
+                    case 'updateslider':
+                        if(isset($_POST['capnhat'])&&($_POST['capnhat'])){
+                            $id = $_POST['id'];
+                            $hinh =$_FILES['hinh']['name'];
+                            $target_dir="../upload/";
+                            $target_file= $target_dir.basename($_FILES["hinh"]["name"]);
+                            if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
+                                
+                            } else {
+                                echo "Sorry, there was an error uploading your file.";
+                            }
+                            update_anhbia($id,$hinh);
+                            $thongbao = "Cập nhật thành công !";
+                        }
+                        $listanhbia=loadall_anhbia();
+                        include "slider/list.php";
+                        break;
             // controller san pham
 
             case'addsp':

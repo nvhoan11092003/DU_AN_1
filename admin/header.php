@@ -26,6 +26,7 @@
             <ul>
                 <li><a href="index.php">Trang Chủ</a></li>
                 <li><a href="index.php?act=lisdm">Danh Mục</a></li>
+                <li><a href="index.php?act=addslider">Slider</a></li>
                 <li><a href="index.php?act=listsp">Món Ăn</a></li>
                 <li><a href="index.php?act=dskh">Khách Hàng</a></li>
                 <li><a href="index.php?act=lienhe">Liên hệ</a></li>
