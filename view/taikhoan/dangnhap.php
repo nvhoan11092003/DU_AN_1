@@ -31,7 +31,7 @@ if (isset($_POST['submit']) && $_POST['submit'] != "") {
             <h1 class="p-4 w-full text-4xl text-center text-black ">Đăng Nhập</h1>
             <!-- báo lỗi đăng nhập thất bại -->
             <p class="text-red-500"><?=isset($error)? $error : "" ?></p>
-            <input class="w-[350px] text-2xl p-4 text-black my-5 border border-gray-500 rounded-2xl" type="text" placeholder="Email" name="email">
+            <input class="w-[350px] text-2xl p-4 text-black my-5 border border-gray-500 rounded-2xl" type="email" placeholder="Email" name="email">
             <input class="w-[350px] text-2xl p-4 text-black my-5 border border-gray-500 rounded-2xl " type="text" placeholder="Mật Khẩu" name="password">
             <div class="w-[350px] my-3 flex items-center justify-between">
                 <label class="hover:text-blue-500 text-black " for="remember">

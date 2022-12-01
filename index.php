@@ -66,6 +66,48 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'viewcart':
             include "view/cart/viewcart.php";
             break;
+        case 'thongtin':
+            include "view/taikhoan/thongtin.php";
+            break;
+        case 'thongtinchung':
+            include "view/taikhoan/thongtin.php";
+            break;
+        case 'donhang':
+            include "view/taikhoan/thongtin.php";
+            break;
+        case 'giohang':
+            include "view/taikhoan/thongtin.php";
+            break;
+        case 'thongtintk':
+            include "view/taikhoan/thongtin.php";
+            break;
+        case 'datmon':
+            include "view/taikhoan/thongtin.php";
+            break;
+        case 'binhluan':
+            include "view/taikhoan/thongtin.php";
+            break;
+        case 'doimk':
+            include "view/taikhoan/thongtin.php";
+            break;
+        case 'dangxuat':
+            include "view/taikhoan/dangxuat.php";
+            break;
+        case 'value':
+            # code...
+            break;
+        case 'value':
+            # code...
+            break;
+        case 'value':
+            # code...
+            break;
+        case 'value':
+            # code...
+            break;
+        case 'value':
+            # code...
+            break;
         case 'value':
             # code...
             break;
@@ -113,7 +155,6 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
 
                 $_SESSION['mycart'][$id]['4'] = $value['4'];
             }
-
             include "view/cart/viewcart.php";
             break;
         case 'bill':

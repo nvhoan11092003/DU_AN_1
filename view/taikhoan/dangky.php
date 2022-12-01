@@ -66,7 +66,7 @@ if (isset($_POST['submit']) && $_POST['submit'] != "") {
         <form class=" opacity-90 my-10 flex flex-col justify-center items-center " action="index.php?act=dangky" method="post">
             <h1 class="p-4 w-full text-4xl text-center text-black ">Đăng ký</h1>
             <!-- email -->
-            <input class="w-[350px] text-2xl p-4 text-black my-5 border border-gray-500 rounded-2xl" type="text" placeholder="Email" name="email" value="<?= isset($email)  ? $email : "" ?>">
+            <input class="w-[350px] text-2xl p-4 text-black my-5 border border-gray-500 rounded-2xl" type="email" placeholder="Email" name="email" value="<?= isset($email)  ? $email : "" ?>">
             <p class=" text-red-500">
                 <?= isset($error_email) ? $error_email : "" ?>
             </p>

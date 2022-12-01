@@ -27,5 +27,16 @@ function delete_user($id)
     pdo_execute($sql);
 }
 
+function update_user($name,$tel,$gender,$address,$id_user)
+{
+    $sql = "UPDATE users SET name='$name',tel='$tel',gender='$gender',address='$address' WHERE id = '$id_user' ";
+    pdo_execute($sql);
+}
+
+function update_password_user($password , $id_user)
+{
+    $sql = "UPDATE users SET password='$password' WHERE id = '$id_user'";
+    pdo_execute($sql);
+}
 
 ?>

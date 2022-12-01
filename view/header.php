@@ -18,9 +18,8 @@
     <link rel="stylesheet" href="view/fontawesome-free-6.2.0-web/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
-
-
 </head>
 
 <body>
@@ -48,12 +47,13 @@
                         ?>
                             <li class="navv-item">
                                 <a class="navv-item-link" href="index.php?act=dangnhap" class="arrow"><i class="nav-icon fa-solid fa-caret-down"></i></a>
-                                <ul class="sub-navv">
-                                    <li class="sub-navv-item"><a href="view/taikhoan/dangxuat.php" class="sub-navv-link">Đăng Xuất</a></li>
-                                    <li class="sub-navv-item"><a href="" class="sub-navv-link">Cập nhật tài khoản</a></li>
+                                <ul class="sub-navv"> 
+                                    <li class="sub-navv-item"><a href="index.php?act=thongtin" class="sub-navv-link">Trang cá nhân</a></li>
                                     <?php if ($rol == 1) { ?>
                                         <li class="sub-navv-item"><a href="admin/index.php" class="sub-navv-link">Đi tới trang quản trị</a></li>
+                                    
                                     <?php } ?>
+                                    <li class="sub-navv-item"><a href="view/taikhoan/dangxuat.php" class="sub-navv-link">Đăng Xuất</a></li>
                                 </ul>
                             </li>
                         <?php } else { ?>
