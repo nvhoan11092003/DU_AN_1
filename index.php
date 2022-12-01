@@ -84,11 +84,11 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $price = $_POST['price'];
                 $amount = $_POST['amount'];
                 $totalPrice = $price * $amount;
-                
 
 
 
-                $addCart = [$id, $name, $img, $price, $amount , $totalPrice];
+
+                $addCart = [$id, $name, $img, $price, $amount, $totalPrice];
                 array_push($_SESSION['mycart'], $addCart);
             }
             include "view/cart/viewcart.php";
@@ -102,23 +102,51 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             header('location: index.php?act=viewcart');
             break;
         case 'update_cart':
-              
+
             $amount = $_POST['amount'];
-           
-            
-            
+
+
+
 
             foreach ($_SESSION['mycart'] as $id => $value) {
                 $value['4'] = $amount[$value['0']];
 
                 $_SESSION['mycart'][$id]['4'] = $value['4'];
-             
             }
-           
+
             include "view/cart/viewcart.php";
             break;
         case 'bill':
             include "view/cart/bill.php";
+            break;
+        case 'billconfirm':
+
+            if (isset($_POST['dongydathang']) && $_POST['dongydathang']) {
+                if (isset($_SESSION['user'])) {
+                    $iduser = $_SESSION['user']['id'];
+                } else {
+                    $iduser = 0;
+                }
+                $name = $_POST['name1'];
+                $tel = $_POST['tel1'];
+                $email = $_POST['email1'];
+                $ship = $_POST['ship'];
+                $city = $_POST['city'];
+                $township = $_POST['township'];
+                $note = $_POST['note'];
+                $date = $_POST['date'];
+                $time = $_POST['time'];
+                $total = tongdonhang();
+                
+                $idbill = insert_bill($name, $tel, $email, $ship, $city, $township, $note, $date, $time, $total, $iduser);
+                foreach ($_SESSION['mycart'] as $cart) {
+                    insert_cart($_SESSION['user']['id'], $cart[0], $cart[2], $cart[1], $cart[3], $cart[4], $cart[5], $idbill);
+                }
+                $_SESSION['cart'] = [];
+            }
+            $bill = loadone_bill($idbill);
+            $billct = loadall_cart($idbill);
+            include "view/cart/billconfirm.php";
             break;
         default:
             # code...

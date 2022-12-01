@@ -886,6 +886,7 @@ line-height: 44px;
     border-radius: 99px;
     text-align: center;
     margin-right: 10px;
+    max-width: 262px;
 }
 .update-input:hover,
 .total-link:hover{
@@ -974,4 +975,36 @@ margin-top: 40px;
     text-align: center;
     
     margin: 20px 10px 20px 0px;
+}
+
+.infor-title{
+    color: #f07030;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    margin-top: 20px;
+}
+.infor-ip{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    height: 47px;
+    border: 1px solid #ced4da;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+.area-infor{
+    display: block;
+    width: 100%;
+    border: 1px solid #ced4da;
+    padding-left: 16px;
+    border-radius: 5px;
+    padding-top: 10px;
+}
+.question{
+    color: #f07030;
+    display: block;
 }
