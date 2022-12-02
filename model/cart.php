@@ -182,3 +182,7 @@ function bill_chi_tiet($listbill)
                    
                 </tr>';
 }
+function delete_bill($id){
+    $sql = "delete from bill where id =".$id;
+    pdo_execute($sql);
+}

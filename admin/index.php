@@ -7,6 +7,7 @@
     include "../model/thongke.php";
     include "../model/taikhoan.php";
     include "../model/lienhe.php";
+    include "../model/cart.php";
     if(isset($_GET['act'])){ 
         $act=$_GET['act'];
         switch($act) {
@@ -209,11 +210,22 @@
             case'':
                 include "";
                 break;
-            case'':
-                include "";
+            case'listbill':
+                if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
+                    $kyw = $_POST['kyw'];
+                } else {
+                    $kyw = "";
+                }
+                $listbill = loadall_bill($kyw, 0);
+                include "bill/listbill.php";
                 break; 
-            case'':
-                include "";
+            case'xoabill':
+                if(isset($_GET['id']) && $_GET['id']){
+                    $id = $_GET['id'];
+                    delete_bill($id);
+                }
+                $listbill = loadall_bill('',0);
+                include "bill/listbill.php";
                 break;
              case'':
                 include "";
