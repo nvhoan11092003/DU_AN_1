@@ -8,6 +8,7 @@ include "model/sanpham.php";
 include "model/taikhoan.php";
 include "model/datban.php";
 include "model/cart.php";
+include "model/slider.php";
 include "global.php";
 
 if (!isset($_SESSION['mycart'])) {
@@ -133,7 +134,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $addCart = [$id, $name, $img, $price, $amount, $totalPrice];
                 array_push($_SESSION['mycart'], $addCart);
             }
-            include "view/cart/viewcart.php";
+            header("location:" . $_SERVER["HTTP_REFERER"]);
             break;
         case 'delcart':
             if (isset($_GET['idcart'])) {

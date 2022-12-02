@@ -14,7 +14,11 @@
                         <input type="file" name="hinh" id="" required>
                     </div>
 
-
+                    <div class="row mb10">
+                        Trạng thái<br>
+                        <input type="radio" name="status" value="1" checked> Sử dụng
+                        <input type="radio" name="status" value="0"> Không sử dụng
+                    </div>
                     <div class="row mb10">
                         <input type="submit" name="themmoi" value="THÊM MỚI">
                         <input type="reset" value="NHẬP LẠI ẢNH">

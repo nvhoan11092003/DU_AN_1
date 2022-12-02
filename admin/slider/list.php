@@ -10,6 +10,7 @@
                                 <th></th>
                                 <th>STT</th>
                                 <th>HÌNH</th>
+                                <th>Trạng thái</th>
                                 <th></th>
                             </tr>
                             <?php
@@ -18,6 +19,11 @@
                                     $suabia = "index.php?act=suabia&id=".$id;
                                     $xoabia = "index.php?act=xoabia&id=".$id;
                                     $hinhpath ="../upload/".$img;
+                                    if($status==1){
+                                        $status='Sử dụng';
+                                    }else{
+                                        $status='Không sử dụng';
+                                    }
                                     if(is_file($hinhpath)){
                                         $hinh = "<img src='".$hinhpath."' height='80'>";
                                     }else{
@@ -28,6 +34,7 @@
                                     <td><input type="checkbox" name="" id=""></td>
                                     <td>'.$id.'</td>
                                     <td>'.$hinh.'</td>
+                                    <td>'.$status.'</td>
                                     <td><a href="'.$suabia.'"><input type="button" value="Sửa"></a> <a href="'.$xoabia.'"><input type="button" value="Xóa"></a></td>
                                     </tr>';
                                 }

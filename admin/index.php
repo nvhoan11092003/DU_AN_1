@@ -66,13 +66,14 @@
                 if(isset($_POST['themmoi'])&&($_POST['themmoi'])){ 
                     $hinh =$_FILES ['hinh']['name'];
                     $target_dir ="../upload/";
+                    $status = $_POST['status'];
                     $target_file = $target_dir. basename($_FILES["hinh"]["name"]);
                     if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
                         //echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
                     } else {
                         //echo "Sorry, there was an error uploading your file.";
                     }
-                    insert_anhbia($hinh);
+                    insert_anhbia($hinh,$status);
                     $thongbao="Thêm thành công !";
                 }
                 include "slider/add.php";
@@ -99,7 +100,9 @@
                     case 'updateslider':
                         if(isset($_POST['capnhat'])&&($_POST['capnhat'])){
                             $id = $_POST['id'];
-                            $hinh =$_FILES['hinh']['name'];
+                            $hinh = $_FILES['hinh']['name'];
+                            
+                            $status = $_POST['status'];
                             $target_dir="../upload/";
                             $target_file= $target_dir.basename($_FILES["hinh"]["name"]);
                             if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
@@ -107,7 +110,7 @@
                             } else {
                                 echo "Sorry, there was an error uploading your file.";
                             }
-                            update_anhbia($id,$hinh);
+                            update_anhbia($id,$hinh,$status);
                             $thongbao = "Cập nhật thành công !";
                         }
                         $listanhbia=loadall_anhbia();

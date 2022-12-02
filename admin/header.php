@@ -29,6 +29,7 @@
                 <li><a href="index.php?act=addslider">Slider</a></li>
                 <li><a href="index.php?act=listsp">Món Ăn</a></li>
                 <li><a href="index.php?act=dskh">Khách Hàng</a></li>
+                <li><a href="index.php?act=listbill">Đơn hàng</a></li>
                 <li><a href="index.php?act=lienhe">Liên hệ</a></li>
                 <li><a href="index.php?act=thongke">Thống Kê</a></li>
             </ul>

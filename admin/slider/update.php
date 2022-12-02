@@ -19,9 +19,22 @@
 
                     <div class="row mb10">
                         Hình ảnh<br>
-                        <input type="file" name="hinh" id="" required>
+                        <input type="file" name="hinh"  value = "<?=$img?>">
+                        <img style="max-height: 200px;" src="../upload/<?=$img?>" alt="">
                     </div>
-
+                    <div class="row mb10">
+                        Trạng thái<br>
+                        
+                        <?php
+                        if($status == 0){
+                            echo '<input type="radio" name="status" value="1" > Sử dụng
+                            <input type="radio" name="status" value="0" checked> Không sử dụng';
+                        }else{
+                            echo '<input type="radio" name="status" value="1" checked> Sử dụng
+                            <input type="radio" name="status" value="0"> Không sử dụng';
+                        }
+                        ?>
+                    </div>
                     <div class="row mb10">
                         <input type="hidden" name="id" value="<?php if(isset($id)&&($id>0)) echo $id; ?>">
                         <input type="submit" name= "capnhat" value="CẬP NHẬT">
