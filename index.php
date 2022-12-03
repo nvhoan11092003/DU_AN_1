@@ -185,7 +185,8 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 foreach ($_SESSION['mycart'] as $cart) {
                     insert_cart($iduser, $cart[0], $cart[2], $cart[1], $cart[3], $cart[4], $cart[5], $idbill);
                 }
-                $_SESSION['cart'] = [];
+                $_SESSION['mycart'] = [];
+            
             }
             $bill = loadone_bill($idbill);
             $billct = loadall_cart($idbill);

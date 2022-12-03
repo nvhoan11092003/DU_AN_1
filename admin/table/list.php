@@ -28,13 +28,7 @@
                                     extract($sanpham);
                                     $suasp = "index.php?act=suasp&id=".$id;
                                     $xoasp = "index.php?act=xoasp&id=".$id;
-                                    $hinhpath ="../upload/".$img;
-                                    if(is_file($hinhpath)){
-                                        $hinh = "<img src='".$hinhpath."' height='80'>";
-                                    }else{
-                                        $hinh = "no photo";
-                                    }
-
+                                    
                                     echo '<tr>
                                             <td><input type="checkbox" id=""></td>
                                             <td>'.$id.'</td>
