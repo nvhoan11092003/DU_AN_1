@@ -162,14 +162,14 @@ function bill_chi_tiet($listbill)
         $hinh = $cart['img'];
 
 
-        $tong += $cart['thanhtien'];
+        $tong += $cart['totalPrice'];
 
         echo '<tr>
                         <td><img src="' . $hinh . '" alt="" height="80px"></td>
                         <td>' . $cart['name'] . '</td>
                         <td>' . $cart['price'] . '</td>
-                        <td>' . $cart['soluong'] . '</td>
-                        <td>' . $cart['thanhtien'] . '</td>
+                        <td>' . $cart['amount'] . '</td>
+                        <td>' . $cart['totalPrice'] . '</td>
                         
                     </tr>';
         $i += 1;
@@ -178,7 +178,7 @@ function bill_chi_tiet($listbill)
     echo '<tr>
                     <td colspan="4">Tổng tiền</td>
                     
-                    <td colspan="2">' . $tong . '</td>
+                    <td colspan="2" style="">' . $tong . '</td>
                    
                 </tr>';
 }
