@@ -183,7 +183,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 
                 $idbill = insert_bill($name, $tel, $email, $ship, $city, $township, $note, $date, $time, $total, $iduser);
                 foreach ($_SESSION['mycart'] as $cart) {
-                    insert_cart($_SESSION['user']['id'], $cart[0], $cart[2], $cart[1], $cart[3], $cart[4], $cart[5], $idbill);
+                    insert_cart($iduser, $cart[0], $cart[2], $cart[1], $cart[3], $cart[4], $cart[5], $idbill);
                 }
                 $_SESSION['cart'] = [];
             }
