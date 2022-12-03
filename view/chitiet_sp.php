@@ -1,6 +1,14 @@
 <?php
 extract($sp_chitiet);
 $img = $img_path . $img;
+
+
+
+
+
+// 5 bình luận
+$sql = "";
+
 ?>
 <div class="detail-product">
     <div class="grid wide">
@@ -25,6 +33,30 @@ $img = $img_path . $img;
                 <!-- <input type="text" class="detail-buy" value="Đặt ngay"> -->
             </div>
         </form>
+        <!-- tiêu đề  -->
+        <h4 class="product-other-title">Bình Luận</h2>
+        <!-- danh sách bình luận -->
+        <div class="">
+
+        </div>
+        <!-- bình luận -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                    $("#binhluan").load("view/binhluan/binhluanform.php", {
+                        idpro : <?= $id ?>
+                });
+            });
+        </script>
+        <div class="" id="binhluan">
+            
+        </div>
+        <!-- <form action="index.php?act=chitiet_sp&id=<?=$id?>" method="POST">
+            <label for="" class="flex items-center">
+            <input type="text" name="content" class="border p-2 rounded-xl text-black border-black w-[500px]" required>
+            <input type="submit" value="Gửi" name="submit" class="flex-none text-2xl p-3 w-[100px] text-white rounded-2xl bg-blue-500 hover:bg-blue-600">
+            </label>
+        </form> -->
         <h4 class="product-other-title">Các sản phẩm cùng loại</h2>
             <div class="row">
                 <?php

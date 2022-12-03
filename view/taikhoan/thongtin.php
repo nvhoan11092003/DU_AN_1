@@ -31,8 +31,8 @@
             case 'doimk':
                 include "view/taikhoan/doimk.php";
                 break;
-            case 'value':
-                # code...
+            case 'binhluan':
+                include "view/taikhoan/binhluan.php";
                 break;
             case 'value':
                 # code...
