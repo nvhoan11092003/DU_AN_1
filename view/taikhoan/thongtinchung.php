@@ -47,6 +47,8 @@ $list_comment = select_comment_by_user($id_user);
     </div>
     <div class="border-b-2 border-red-500 mb-10"></div>
     <table>
+        <?php if ($list_comment !== []) {
+            echo "
         <thead>
             <tr>
                 <th></th>
@@ -54,7 +56,9 @@ $list_comment = select_comment_by_user($id_user);
                 <th>Thời Gian</th>
                 <th>Nội Dung</th>
             </tr>
-        </thead>
+        </thead>";
+        } ?>
+        
         <tbody>
             <?php foreach ($list_comment as $key => $value) : extract($value) ?>
                 <tr class="border-t border-stone-100">

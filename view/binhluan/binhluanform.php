@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
 if (isset($_REQUEST['idpro'])) {
     $id_pro = $_REQUEST['idpro'];
 } else {
@@ -12,7 +12,7 @@ include "../../model/binhluan.php";
 
 if (isset($_POST['submit'])) {
     // lấy id user 
-    session_start();
+
     $id_user = $_SESSION['user']['id'];
     extract($_POST);
     // lấy id sản phẩm
@@ -58,14 +58,13 @@ $list_comment = select_comment_by_product($id_pro);
                             <p class="comment-content"><?= $content ?></p>
                             <!-- <i class="like-icon fa-regular fa-heart"></i> -->
                         </li>
-                    <?php endforeach ?>
+                    <?php endforeach  ?>
                     <?php if ($list_comment == []) {
                         echo "chưa có bình luận nào";
                     } ?>
                 </ul>
-                <?php if (isset($_SESSION['user']['id'])) {
+                <?php if (isset($_SESSION['user'])) {
                 ?>
-
                     <form class="comment-form" action="view/binhluan/binhluanform.php" method="post">
                         <input type="hidden" value="<?= $id_pro ?>" name="id">
                         <input class="comment-input" name="content" type="text" placeholder="...Viết bình luận..." required>

@@ -950,7 +950,7 @@ margin-top: 40px;
     max-height: 40px;
     margin-left: 20px;
     border: none;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color) !important;
     color: #0a0a0a;
     font-weight: 500;
     border-radius: 2px;
