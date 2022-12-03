@@ -9,6 +9,7 @@ include "model/taikhoan.php";
 include "model/datban.php";
 include "model/cart.php";
 include "model/slider.php";
+include "model/binhluan.php";
 include "global.php";
 
 if (!isset($_SESSION['mycart'])) {
@@ -142,7 +143,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             } else {
                 $_SESSION['mycart'] = [];
             }
-            header('location: index.php?act=viewcart');
+            header("location:" . $_SERVER["HTTP_REFERER"]);
             break;
         case 'update_cart':
 

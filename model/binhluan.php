@@ -1,7 +1,7 @@
 <?php
-function insert_binhluan($noidung,$iduser,$idpro,$ngaybinhluan)
+function insert_binhluan($id_user,$id_pro,$content,$time)
 {
-    $sql = "insert into comment(commentContent, customerId, productId, commentDate) values('$noidung','$iduser', '$idpro', '$ngaybinhluan')";
+    $sql="INSERT INTO comment( id_user, id_pro, content, time) VALUES ('$id_user','$id_pro','$content','$time')";
     pdo_execute($sql);
 }
 
@@ -25,6 +25,18 @@ function delete_binhluan($id){
 }
 
 function select_comment_by_product($id){
-    $sql = "SELECT b.*, h.ten_hh FROM binhluan b JOIN hang_hoa h ON h.ma_hanghoa-b.ma_hanghoa WHERE b.ma_hanghoa=$id ORDER BY ngay_bl DESC";
+    $sql = "SELECT users.name as name , comment.content as content , comment.time as time  FROM comment INNER JOIN users ON comment.id_user = users.id INNER JOIN products ON products.id = comment.id_pro
+    WHERE products.id = $id ORDER BY comment.id DESC LIMIT 0,5 ";
+    
     return pdo_query($sql);
 }
+
+
+function select_comment_by_user($id,$start_record = 0 , $record_per_page = 5)
+{
+    $sql = "SELECT products.name as name , products.id as id  , comment.content as content , comment.time as time , products.img as img  FROM comment INNER JOIN users ON comment.id_user = users.id  INNER JOIN products ON products.id = comment.id_pro
+    WHERE users.id = $id ORDER BY comment.id DESC LIMIT $start_record,$record_per_page";
+
+    return pdo_query($sql);
+}
+
