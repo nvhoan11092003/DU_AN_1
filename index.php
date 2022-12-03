@@ -83,7 +83,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'thongtintk':
             include "view/taikhoan/thongtin.php";
             break;
-        case 'datmon':
+        case 'datban':
             include "view/taikhoan/thongtin.php";
             break;
         case 'binhluan':
