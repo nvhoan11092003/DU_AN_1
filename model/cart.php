@@ -132,17 +132,47 @@ function loadall_cart_count($idbill)
     $sp = pdo_query($sql);
     return sizeof($sp);
 }
+
+function status_bill($status)
+{
+    switch ($status) {
+        case '0':
+            
+            break;
+        case '1':
+            $text = "đang vận chuyển ";
+            break;
+        case '2':
+            $text = "giao thành công";
+            break;
+        default:
+            $text = "đang xử lý ";
+            break;
+    }
+    return $text;
+}
+
 function loadall_bill($kyw="",$iduser=0)
 {
     $sql = "select * from bill where 1";
     if ($iduser>0) $sql.=" AND iduser=".$iduser;
     if($kyw!="") $sql.=" AND id like '%".$kyw."%'";
-    $sql.=" order by id desc";
-   
-  
+    $sql.=" order by id desc ";
     $sp = pdo_query($sql);
     return $sp;
 }
+
+function loadpage_bill($kyw="",$iduser=0,$start_record = 0 , $record_per_page = 5)
+{
+    $sql = "select * from bill where 1";
+    if ($iduser>0) $sql.=" AND iduser=".$iduser;
+    if($kyw!="") $sql.=" AND id like '%".$kyw."%'";
+    $sql.=" order by id desc LIMIT $start_record , $record_per_page";
+    $sp = pdo_query($sql);
+    return $sp;
+}
+
+
 function bill_chi_tiet($listbill)
 {
     $i = 0;
@@ -182,7 +212,13 @@ function bill_chi_tiet($listbill)
                    
                 </tr>';
 }
+
+
+
+
 function delete_bill($id){
     $sql = "delete from bill where id =".$id;
     pdo_execute($sql);
 }
+
+

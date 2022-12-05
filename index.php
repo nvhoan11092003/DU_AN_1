@@ -95,8 +95,8 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'dangxuat':
             include "view/taikhoan/dangxuat.php";
             break;
-        case 'value':
-            # code...
+        case 'billct':
+            include "view/taikhoan/thongtin.php";
             break;
         case 'value':
             # code...
