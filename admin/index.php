@@ -98,6 +98,13 @@ if (isset($_GET['act'])) {
             break;
 
         case 'updateslider':
+            if(isset($_GET['id']) && $_GET['id']){
+                $id = $_GET['id'];
+                $status = $_GET['status'];
+                
+                update_anhbia($id,"",$status);
+                $thongbao = "Cập nhật thành công !";
+            }
             if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
                 $id = $_POST['id'];
                 $hinh = $_FILES['hinh']['name'];
@@ -228,6 +235,19 @@ if (isset($_GET['act'])) {
             break;
         case 'listban':
             include "table/list.php";
+            break;
+        case 'status':
+            
+            include "table/list.php";
+            break;
+        case 'statusbill':
+            if(isset($_GET['id'])&& $_GET['id']){
+                $id = $_GET['id'];
+                $status = $_GET['status'];
+                update_status_bill($id,$status);
+            }
+            $listbill = loadall_bill('', 0);
+            include "bill/listbill.php";
             break;
         default:
             include "home.php";
