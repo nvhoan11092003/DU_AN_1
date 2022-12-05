@@ -102,9 +102,9 @@ function tongdonhang()
     return $tong;
 }
 
-function insert_bill($name, $tel,$email, $ship,$city, $township, $note, $date, $time, $total, $iduser)
+function insert_bill($name, $tel,$email, $ship,$city, $township, $note, $date, $time, $total,$status, $iduser)
 {
-    $sql = "insert into bill(name,tel,email,ship,city,township,note,date,time,total,iduser) values('$name','$tel','$email', '$ship', '$city','$township', '$note', '$date', '$time','$total','$iduser')";
+    $sql = "insert into bill(name,tel,email,ship,city,township,note,date,time,total,status,iduser) values('$name','$tel','$email', '$ship', '$city','$township', '$note', '$date', '$time','$total',$status,'$iduser')";
     return pdo_execute_return_LastInsertID($sql);
 }
 function insert_cart($idUser, $idProduct, $img, $name, $price, $amount, $totalPrice, $idbill)
@@ -185,4 +185,9 @@ function bill_chi_tiet($listbill)
 function delete_bill($id){
     $sql = "delete from bill where id =".$id;
     pdo_execute($sql);
+}
+
+function update_status_bill($id,$status){
+$sql = "UPDATE bill SET status = '".$status."' where id = ".$id;
+pdo_execute($sql);
 }

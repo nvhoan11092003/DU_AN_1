@@ -180,8 +180,8 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $date = $_POST['date'];
                 $time = $_POST['time'];
                 $total = tongdonhang();
-                
-                $idbill = insert_bill($name, $tel, $email, $ship, $city, $township, $note, $date, $time, $total, $iduser);
+                $status = 0;
+                $idbill = insert_bill($name, $tel, $email, $ship, $city, $township, $note, $date, $time, $total,$status, $iduser);
                 foreach ($_SESSION['mycart'] as $cart) {
                     insert_cart($iduser, $cart[0], $cart[2], $cart[1], $cart[3], $cart[4], $cart[5], $idbill);
                 }
