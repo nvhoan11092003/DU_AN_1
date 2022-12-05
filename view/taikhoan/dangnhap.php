@@ -15,10 +15,6 @@ if (isset($_POST['submit']) && $_POST['submit'] != "") {
             $error = "Tài Khoản Hoặc Mật Khẩu Không chính xác";
         }
     }
-
-
-
-
 }
 
 

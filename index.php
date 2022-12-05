@@ -121,6 +121,17 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
 
             break;
         case 'addtocart':
+            extract($_POST);
+            // var_dump($_SESSION['mycart']);
+            foreach ($_SESSION['mycart'] as $key => $value) {
+                if ($value['0']==$id) {
+                    $_SESSION['mycart']["$key"]['4'] +=  $amount ;
+                    var_dump($_SESSION['mycart']["$key"]['4']+ 2);
+                    header("location:" . $_SERVER["HTTP_REFERER"]);
+                    die;
+                }
+            }
+            
             if (isset($_POST['addtocart']) && ($_POST['addtocart'])) {
                 $id = $_POST['id'];
                 $name = $_POST['name'];
@@ -128,10 +139,6 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $price = $_POST['price'];
                 $amount = $_POST['amount'];
                 $totalPrice = $price * $amount;
-
-
-
-
                 $addCart = [$id, $name, $img, $price, $amount, $totalPrice];
                 array_push($_SESSION['mycart'], $addCart);
             }
@@ -160,7 +167,11 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "view/cart/viewcart.php";
             break;
         case 'bill':
-            include "view/cart/bill.php";
+            if ($_SESSION['mycart'] !== []) {
+                include "view/cart/bill.php";
+            }else{
+                header("location:" . $_SERVER["HTTP_REFERER"]);
+            }
             break;
         case 'billconfirm':
 
@@ -186,7 +197,10 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                     insert_cart($iduser, $cart[0], $cart[2], $cart[1], $cart[3], $cart[4], $cart[5], $idbill);
                 }
                 $_SESSION['mycart'] = [];
-            
+                // cập nhập địa chỉ user
+                update_address_user($iduser,$township);
+                // cập nhập địa chỉ trong session user
+                  $_SESSION['user'] = loadone_user($iduser);
             }
             $bill = loadone_bill($idbill);
             $billct = loadall_cart($idbill);

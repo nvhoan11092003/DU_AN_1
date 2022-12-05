@@ -35,7 +35,6 @@ function viewcart($del)
         $img = $cart[2];
         $amount = $cart[4];
         $totalPrice = $price * $amount;
-
         $total += $totalPrice;
         if ($del == 1) {
             $xoasp_td = '<td class="cart-td"><a href="index.php?act=delcart&idcart=' . $i . '"><i class="cart-icon fa-solid fa-trash-can"></i></a></td>';
@@ -46,7 +45,7 @@ function viewcart($del)
         echo '
     <tr>
     <td class="cart-td"><div class="cart-product">
-    <img class="cart-img" src="' . $img . '" alt="">
+    <img class="cart-img " src="' . $img . '" alt="">
     <input type="text" name="img" hidden value="' . $img . '">
     <input type="text" name="id" hidden value="' . $id . '">
     <input type="text" name="name" hidden value="' . $name . '">
@@ -128,25 +127,25 @@ function loadall_cart($idbill)
 
 function loadall_cart_count($idbill)
 {
-    $sql = "select * from cart where idbill=" . $idbill;
-    $sp = pdo_query($sql);
-    return sizeof($sp);
+    $sql = "SELECT SUM(cart.amount) as sl FROM cart WHERE idBill = $idbill";
+    $sp = pdo_query_one($sql);
+    return $sp['sl'];
 }
 
 function status_bill($status)
 {
     switch ($status) {
         case '0':
-            
+            $text = "Đang xử lý ";
             break;
         case '1':
-            $text = "đang vận chuyển ";
+            $text = "Đang Giao ";
             break;
         case '2':
-            $text = "giao thành công";
+            $text = "Giao hàng thành công";
             break;
         default:
-            $text = "đang xử lý ";
+            $text = "Đang xử lý ";
             break;
     }
     return $text;
@@ -190,12 +189,10 @@ function bill_chi_tiet($listbill)
 
     foreach ($listbill as $cart) {
         $hinh = $cart['img'];
-
-
         $tong += $cart['totalPrice'];
 
         echo '<tr>
-                        <td><img src="' . $hinh . '" alt="" height="80px"></td>
+                        <td><img src="' . $hinh . '"  alt="" class="h-[180px] w-[250px]" height="80px"></td>
                         <td>' . $cart['name'] . '</td>
                         <td>' . $cart['price'] . '</td>
                         <td>' . $cart['amount'] . '</td>
