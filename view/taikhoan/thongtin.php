@@ -20,7 +20,7 @@
                 include "view/taikhoan/thongtinchung.php";
                 break;
             case 'donhang':
-                
+                include "view/taikhoan/bill.php";
                 break;
             case 'giohang':
                 include "view/cart/viewcart.php";
@@ -34,8 +34,11 @@
             case 'binhluan':
                 include "view/taikhoan/binhluan.php";
                 break;
-            case 'value':
-                # code...
+            case 'billct':
+                $idbill=$_GET['id'];
+                $bill = loadone_bill($idbill);
+                $billct = loadall_cart($idbill);
+                include "view/cart/billconfirm.php";
                 break;
             case 'value':
                 # code...

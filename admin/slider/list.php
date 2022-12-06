@@ -11,7 +11,9 @@
                                 <th>STT</th>
                                 <th>HÌNH</th>
                                 <th>Trạng thái</th>
+                                <th>Control</th>
                                 <th></th>
+                            
                             </tr>
                             <?php
                                 foreach($listanhbia as $anhbia){
@@ -20,8 +22,10 @@
                                     $xoabia = "index.php?act=xoabia&id=".$id;
                                     $hinhpath ="../upload/".$img;
                                     if($status==1){
+                                        $action='<a style="text-decoration: none; border: 1px solid #ccc; color: #000; padding: 8px; " href="index.php?act=updateslider&id='.$id.'&status=0">Không sử dụng</a>';
                                         $status='Sử dụng';
                                     }else{
+                                        $action='<a style="text-decoration: none; border: 1px solid #ccc; color: #000; padding: 8px; " href="index.php?act=updateslider&id='.$id.'&status=1">Sử dụng</a>';
                                         $status='Không sử dụng';
                                     }
                                     if(is_file($hinhpath)){
@@ -35,6 +39,7 @@
                                     <td>'.$id.'</td>
                                     <td>'.$hinh.'</td>
                                     <td>'.$status.'</td>
+                                    <td>'.$action.'</td>
                                     <td><a href="'.$suabia.'"><input type="button" value="Sửa"></a> <a href="'.$xoabia.'"><input type="button" value="Xóa"></a></td>
                                     </tr>';
                                 }
