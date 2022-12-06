@@ -19,13 +19,15 @@
                                 <th>MÃ LOẠI</th>
                                 <th>TÊN NGƯỜI KHÁCH HÀNG</th>
                                 <th>SỐ ĐIỆN THOẠI</th>
+                                <th>SỐ NGƯỜI</th>
                                 <th>NGÀY</th>
                                 <th>GIỜ</th>
+                                <th>TRẠNG THÁI</th>
                                 <th></th>
                             </tr>
                             <?php
-                                foreach($listsanpham as $sanpham){
-                                    extract($sanpham);
+                                foreach($listbooking as $booking){
+                                    extract($booking);
                                     $suasp = "index.php?act=suasp&id=".$id;
                                     $xoasp = "index.php?act=xoasp&id=".$id;
                                     
@@ -34,8 +36,11 @@
                                             <td>'.$id.'</td>
                                             <td>'.$name.'</td>
                                            
-                                            <td>'.$price.'</td>
-                                            <td>'.$view.'</td>
+                                            <td>'.$tel.'</td>
+                                            <td>'.$number_people.'</td>
+                                            <td>'.$date.'</td>
+                                            <td>'.$time.'</td>
+                                            <td>'.$status.'</td>
                                             <td><a href="'.$suasp.'"><input type="button" value="Sửa"></a> <a href="'.$xoasp.'"><input type="button" value="Xóa"></a></td>
                                         </tr>';
                                 }

@@ -8,6 +8,7 @@ include "../model/thongke.php";
 include "../model/taikhoan.php";
 include "../model/lienhe.php";
 include "../model/cart.php";
+include "../model/datban.php";
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {
@@ -231,7 +232,8 @@ if (isset($_GET['act'])) {
             include "bill/listbill.php";
             break;
         case 'quanlyban':
-            include "";
+            $listbooking = load_all_booking();
+            include "table/list.php";
             break;
         case 'listban':
             include "table/list.php";
