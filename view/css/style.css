@@ -230,10 +230,13 @@
     padding: 10px 20px;
     border: 1px solid #ccc;
 }
-.tenmon a {
+.tenmon th a {
     text-decoration: none;
     font-weight: bold;
+
 }
+
+
 
 
   

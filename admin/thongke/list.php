@@ -8,9 +8,9 @@
                 <tr>
                 <th>Tên Món</th>
                 <div class="tenmon">
-                    <th><a href="index.php?act=thongke&loc=tongtien" style="text-decoration: none;">TỔNG TIỀN</a></th>
-                    <th><a href="index.php?act=thongke&loc=view" style="text-decoration: none;">VIEW</a></th>
-                    <th><a href="index.php?act=thongke&loc=soluong" style="text-decoration: none;">  SỐ LƯỢNG</a></th>
+                    <th><a href="index.php?act=thongke&loc=tongtien" style="text-decoration: none;color:black">TỔNG TIỀN</a></th>
+                    <th><a href="index.php?act=thongke&loc=view" style="text-decoration: none;color:black">VIEW</a></th>
+                    <th><a href="index.php?act=thongke&loc=soluong" style="text-decoration: none;color:black">  SỐ LƯỢNG</a></th>
                     </div>
                     </tr>
                 <?php
@@ -30,7 +30,7 @@
 
     </div>
 
-
+            
     <div class="row frmtitle">
         <h1>THỐNG KÊ SẢN PHẨM THEO LOẠI</h1>
     </div>
