@@ -7,6 +7,14 @@ function loadall_thongke(){
     return $listtk ;
 }
 
+function loadall_thongke2($loc = "tongtien"){
+
+    $sql ="SELECT cart.name, sum(cart.totalPrice) as tongtien, products.view, SUM(cart.amount) as soluong FROM cart inner join products on cart.idProduct = products.id GROUP BY cart.name order BY $loc DESC;";
+    $listtk =pdo_query($sql);
+    return $listtk ;
+
+}
+
 
 
 ?>
