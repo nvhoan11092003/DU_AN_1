@@ -1,14 +1,16 @@
 <?php
 if (isset($_SESSION['user'])) {
-
+    $address = $_SESSION['user']['address'];
     $name = $_SESSION['user']['name'];
     $tel = $_SESSION['user']['tel'];
     $email = $_SESSION['user']['email'];
 } else {
+    $address= "";
     $name = '';
     $tel = '';
     $email = '';
 }
+
 ?>
 <div class="banner"><img src="view/image/banner-234.jpg" alt="" class="banner-img"></div>
 <div class="grid wide">
@@ -43,17 +45,17 @@ if (isset($_SESSION['user'])) {
                     </div>
                     <div class="col l-6">
                         <select class="infor-ip" name="township" id="">
-                            <option value="">Quận/huyện</option>
-                            <option value="Ba Đình">Ba Đình</option>
-                            <option value="Ba Vì">Ba Vì</option>
-                            <option value="Bắc Từ Liêm">Bắc Từ Liêm</option>
-                            <option value="Cầu Giấy">Cầu Giấy</option>
-                            <option value="Chương Mỹ">Chương Mỹ</option>
-                            <option value="Đan Phượng">Đan Phượng</option>
-                            <option value="Đông Anh">Đông Anh</option>
-                            <option value="Đống Đa">Đống Đa</option>
-                            <option value="Gia Lâm">Gia Lâm</option>
-                            <option value="Hà Đông">Hà Đông</option>
+                            <option value="1" <?= ($address == '1') ? 'selected' : '' ?>>Quận/huyện</option>
+                            <option value="2" <?= ($address == '2') ? 'selected' : '' ?>>Ba Đình</option>
+                            <option value="3" <?= ($address == '3') ? 'selected' : '' ?>>Ba Vì</option>
+                            <option value="4" <?= ($address == '4') ? 'selected' : '' ?>>Bắc Từ Liêm</option>
+                            <option value="5" <?= ($address == '5') ? 'selected' : '' ?>>Cầu Giấy</option>
+                            <option value="6" <?= ($address == '6') ? 'selected' : '' ?>>Chương Mỹ</option>
+                            <option value="7" <?= ($address == '7') ? 'selected' : '' ?>>Đan Phượng</option>
+                            <option value="8" <?= ($address == '8') ? 'selected' : '' ?>>Đông Anh</option>
+                            <option value="9" <?= ($address == '9') ? 'selected' : '' ?>>Đống Đa</option>
+                            <option value="10" <?= ($address == '10') ? 'selected' : '' ?>>Gia Lâm</option>
+                            <option value="11" <?= ($address == '11') ? 'selected' : '' ?>>Hà Đông</option>
                         </select>
                     </div>
                     <div class="col l-12">
