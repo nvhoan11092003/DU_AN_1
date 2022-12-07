@@ -8,10 +8,13 @@
     <title>Admin</title>
     <!-- tailwind
     <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
     <link rel="stylesheet" href="../view/css/style.css">
     <link rel="stylesheet" href="../view/fonts/BerkshireSwash-Regular.ttf">
     <link rel="stylesheet" href="../view/fontawesome-free-6.2.0-web/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
 </head>
