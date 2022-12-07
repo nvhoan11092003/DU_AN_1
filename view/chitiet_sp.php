@@ -63,7 +63,7 @@ $sql = "";
                 $sp_cungloai = load_sanpham_cungloai($id,$iddm);
                 foreach ($sp_cungloai as $sp) {
                     extract($sp);
-
+                    
                     echo'
                     <div class="col l-3">
                     <a href="index.php?act=chitiet_sp&id='.$id.'" style="text-decoration: none;">
@@ -76,7 +76,7 @@ $sql = "";
                             <input type="text" name="id" hidden value="'.$id.'">
                             <input type="text" name="name" hidden value="'.$name.'">
                             <input type="text" name="price" hidden value="'.$price.'">
-                            <input type="text" name="img" hidden value="'.$img.'">
+                            <input type="text" name="img" hidden value="upload/'.$img.'">
                             
                             <input type="text" name="amount" hidden value="1">
                             <input type="submit" value="Đặt ngay" name="addtocart" class="submit-order">

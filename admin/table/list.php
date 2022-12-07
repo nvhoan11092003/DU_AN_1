@@ -17,11 +17,15 @@
                             <tr>
                                 <th></th>
                                 <th>MÃ LOẠI</th>
-                                <th>TÊN NGƯỜI KHÁCH HÀNG</th>
+                                <th>TÊN  KHÁCH HÀNG</th>
                                 <th>SỐ ĐIỆN THOẠI</th>
-                                <th>SỐ NGƯỜI</th>
-                                <th>NGÀY</th>
-                                <th>GIỜ</th>
+                                <th>LOẠI BÀN</th>
+                                <th>NGÀY ĐẶT BÀN</th>
+                                <th>NGÀY NHẬN BÀN</th>
+                                <th>BUỔI</th>
+                                <th>CHECK IN</th>
+                                <th>SỐ LƯỢNG</th>
+                                
                                 <th>TRẠNG THÁI</th>
                                 <th></th>
                             </tr>
@@ -35,11 +39,14 @@
                                             <td><input type="checkbox" id=""></td>
                                             <td>'.$id.'</td>
                                             <td>'.$name.'</td>
-                                           
                                             <td>'.$tel.'</td>
-                                            <td>'.$number_people.'</td>
+                                            <td>'.$id_table.'</td>
+                                            <td>'.$book_date.'</td>
+                                           
                                             <td>'.$date.'</td>
+                                            <td>'.$session.'</td>
                                             <td>'.$time.'</td>
+                                            <td>'.$quantity.'</td>
                                             <td>'.$status.'</td>
                                             <td><a href="'.$suasp.'"><input type="button" value="Sửa"></a> <a href="'.$xoasp.'"><input type="button" value="Xóa"></a></td>
                                         </tr>';

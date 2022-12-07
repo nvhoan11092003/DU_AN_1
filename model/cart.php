@@ -215,6 +215,43 @@ function bill_chi_tiet($listbill)
                 </tr>';
 }
 
+function bill_chi_tiet_admin($listbill)
+{
+    $i = 0;
+    $tong = 0;
+
+    echo '<tr>
+    <th>Hình</th>
+    <th>Sản phẩm</th>
+    <th>Đơn giá</th>
+    <th>Số lượng</th>
+    <th>Thành tiền</th>
+    
+    
+</tr>';
+
+    foreach ($listbill as $cart) {
+        $hinh = $cart['img'];
+        $tong += $cart['totalPrice'];
+
+        echo '<tr>
+                        <td><img src="../' . $hinh . '"  alt="" class="h-[180px] w-[250px]" height="80px"></td>
+                        <td>' . $cart['name'] . '</td>
+                        <td>' . $cart['price'] . '</td>
+                        <td>' . $cart['amount'] . '</td>
+                        <td>' . $cart['totalPrice'] . '</td>
+                        
+                    </tr>';
+        $i += 1;
+    }
+
+    echo '<tr>
+                    <td colspan="4">Tổng tiền</td>
+                    
+                    <td colspan="2" style="">' . $tong . '</td>
+                   
+                </tr>';
+}
 
 
 
