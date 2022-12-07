@@ -8,6 +8,7 @@ include "../model/thongke.php";
 include "../model/taikhoan.php";
 include "../model/lienhe.php";
 include "../model/cart.php";
+
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {

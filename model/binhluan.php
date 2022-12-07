@@ -26,8 +26,7 @@ function delete_binhluan($id){
 
 function select_comment_by_product($id){
     $sql = "SELECT users.name as name , comment.content as content , comment.time as time  FROM comment INNER JOIN users ON comment.id_user = users.id INNER JOIN products ON products.id = comment.id_pro
-    WHERE products.id = $id ORDER BY comment.id DESC LIMIT 0,5 ";
-    
+    WHERE products.id = $id ORDER BY comment.id DESC LIMIT 0,5 "; 
     return pdo_query($sql);
 }
 
@@ -36,7 +35,11 @@ function select_comment_by_user($id,$start_record = 0 , $record_per_page = 5)
 {
     $sql = "SELECT products.name as name , products.id as id  , comment.content as content , comment.time as time , products.img as img  FROM comment INNER JOIN users ON comment.id_user = users.id  INNER JOIN products ON products.id = comment.id_pro
     WHERE users.id = $id ORDER BY comment.id DESC LIMIT $start_record,$record_per_page";
-
     return pdo_query($sql);
 }
 
+function count_comment(){
+    $sql = "SELECT * FROM comment";
+    $listcomment= pdo_query($sql);
+    return count($listcomment);
+}
