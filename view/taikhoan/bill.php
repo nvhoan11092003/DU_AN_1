@@ -1,6 +1,25 @@
 <?php 
 $id_user = $_SESSION['user']['id'];
 
+// lấy page hiện tại 
+if (isset($_GET['page'])) {
+    $page = $_GET['page'];
+} else {
+    $page = 1;
+}
+// số lượng bản ghi trên 1 trang 
+$record_per_page = 10;
+// bản ghi bắt đầu
+$start_record = ($page - 1) * $record_per_page;
+// lấy bản ghi theo page
+$list_bill =   loadpage_bill("",$id_user,$start_record, $record_per_page);
+// lấy số lượng bản ghi
+$count_record = count_bill();
+// số lượng page
+$number_page =  ceil($count_record / $record_per_page);
+// biến khi chọn page nút sẽ có màu sanh
+$focus=" bg-blue-500 hover:bg-blue-500";
+
 
 
 $list_bill = loadpage_bill("",$id_user,0,10);
@@ -19,6 +38,7 @@ $list_bill = loadpage_bill("",$id_user,0,10);
             echo "
         <thead>
             <tr>
+                <th>STT</th>
                 <th>MÃ Đơn Hàng</th>
                 <th>Số Lượng Sản Phẩm</th>
                 <th>Thành Tiền</th>
@@ -32,6 +52,7 @@ $list_bill = loadpage_bill("",$id_user,0,10);
         <tbody>
             <?php foreach ($list_bill as $key => $value) : extract($value) ?>
                 <tr class="border-t border-stone-100">
+                    <td><?= $start_record+ $key + 1 ?></td>
                     <td class="p-2 ">PH<?= $id ?></td>
                     <td> <?= loadall_cart_count($id) ?></td>
                     <td><?= $total ?></td>
@@ -43,3 +64,10 @@ $list_bill = loadpage_bill("",$id_user,0,10);
             <?php endforeach ?>
         </tbody>
     </table>
+
+
+<!-- nút bấm phân trang -->
+        <?php 
+            $href= "index.php?act=donhang";
+            include "model/nutbamphantrang.php";
+        ?>

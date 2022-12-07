@@ -88,7 +88,7 @@ if (isset($_GET['act'])) {
             break;
         case 'suabia':
             if (($_GET['id']) && ($_GET['id'] > 0)) {
-                $dm = loadone_anhbia($_GET['id']);
+                $ab = loadone_anhbia($_GET['id']);
             }
             include "slider/update.php";
             break;
@@ -197,7 +197,13 @@ if (isset($_GET['act'])) {
             break;
 
         case 'thongke':
+            if (isset($_GET['loc'])) {
+                $listthongke2 = loadall_thongke2($_GET['loc']);
+            }else{
+                $listthongke2 = loadall_thongke2();
+            }
             $listthongke = loadall_thongke();
+            
             include "thongke/list.php";
             break;
 

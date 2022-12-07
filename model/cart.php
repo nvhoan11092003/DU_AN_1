@@ -171,6 +171,11 @@ function loadpage_bill($kyw="",$iduser=0,$start_record = 0 , $record_per_page = 
     return $sp;
 }
 
+function count_bill(){
+    $sql = "SELECT * FROM bill";
+    $listcomment= pdo_query($sql);
+    return count($listcomment);
+}
 
 function bill_chi_tiet($listbill)
 {

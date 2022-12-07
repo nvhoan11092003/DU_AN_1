@@ -6,10 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
-    <!-- tailwind
-    <script src="https://cdn.tailwindcss.com"></script> -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="stylesheet" href="../view/css/style.css">
     <link rel="stylesheet" href="../view/fonts/BerkshireSwash-Regular.ttf">
     <link rel="stylesheet" href="../view/fontawesome-free-6.2.0-web/css/all.min.css">
@@ -21,21 +20,21 @@
 
 <body>
     <div class="boxcenter">
-    <img class="banner" src="../view/image/oke.jpg">
+    <!-- <img class="banner" src="../view/image/oke.jpg"> -->
         <div class="row mb header admin">
             <h1 style="text-align:center">ADMIN</h1>
         </div>
         <div class="row mb menu">
             <ul>
-                <li><a href="index.php">Trang Chủ</a></li>
-                <li><a href="index.php?act=lisdm">Danh Mục</a></li>
-                <li><a href="index.php?act=addslider">Slider</a></li>
-                <li><a href="index.php?act=quanlyban">Quản lý đặt  bàn</a></li>
-                <li><a href="index.php?act=listsp">Món Ăn</a></li>
-                <li><a href="index.php?act=dskh">Khách Hàng</a></li>
-                <li><a href="index.php?act=listbill">Đơn hàng</a></li>
-                <li><a href="index.php?act=lienhe">Liên hệ</a></li>
-                <li><a href="index.php?act=thongke">Thống Kê</a></li>
+                <li><a class="p-3 inline-block" href="index.php">Trang Chủ</a></li>
+                <li><a class="p-3 inline-block" href="index.php?act=lisdm">Danh Mục</a></li>
+                <li><a class="p-3 inline-block" href="index.php?act=addslider">Slider</a></li>
+                <li><a class="p-3 inline-block" href="index.php?act=quanlyban">Quản lý đặt bàn</a></li>
+                <li><a class="p-3 inline-block" href="index.php?act=listsp">Món Ăn</a></li>
+                <li><a class="p-3 inline-block" href="index.php?act=dskh">Khách Hàng</a></li>
+                <li><a class="p-3 inline-block" href="index.php?act=listbill">Đơn hàng</a></li>
+                <li><a class="p-3 inline-block" href="index.php?act=lienhe">Liên hệ</a></li>
+                <li><a class="p-3 inline-block" href="index.php?act=thongke">Thống Kê</a></li>
             </ul>
 </div>
 <div class="">
