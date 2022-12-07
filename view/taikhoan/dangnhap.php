@@ -1,4 +1,10 @@
 <?php
+
+if (!isset($_POST['submit'])) {
+    $_SESSION['HTTP_REFERER'] =  $_SERVER["HTTP_REFERER"];
+}
+
+
 if (isset($_POST['submit']) && $_POST['submit'] != "") {
     extract($_POST);
     $listuser = loadall_user();    
@@ -8,7 +14,7 @@ if (isset($_POST['submit']) && $_POST['submit'] != "") {
             // check mật khẩu
             if (password_verify($password , $value['password'])) {
                 $_SESSION['user'] = $value;
-                header('location:index.php');
+                header("location:". $_SESSION['HTTP_REFERER'] );
             } 
         }
         else{
