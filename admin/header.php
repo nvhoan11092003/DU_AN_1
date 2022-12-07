@@ -24,15 +24,15 @@
         </div>
         <div class="row mb menu">
             <ul>
-                <li><a class="p-3 inline-block" href="index.php">Trang Chủ</a></li>
-                <li><a class="p-3 inline-block" href="index.php?act=lisdm">Danh Mục</a></li>
-                <li><a class="p-3 inline-block" href="index.php?act=addslider">Slider</a></li>
-                <li><a class="p-3 inline-block" href="index.php?act=quanlyban">Quản lý bàn</a></li>
-                <li><a class="p-3 inline-block" href="index.php?act=listsp">Món Ăn</a></li>
-                <li><a class="p-3 inline-block" href="index.php?act=dskh">Khách Hàng</a></li>
-                <li><a class="p-3 inline-block" href="index.php?act=listbill">Đơn hàng</a></li>
-                <li><a class="p-3 inline-block" href="index.php?act=lienhe">Liên hệ</a></li>
-                <li><a class="p-3 inline-block" href="index.php?act=thongke">Thống Kê</a></li>
+                <li><a href="index.php">Trang Chủ</a></li>
+                <li><a href="index.php?act=lisdm">Danh Mục</a></li>
+                <li><a href="index.php?act=addslider">Slider</a></li>
+                <li><a href="index.php?act=quanlyban">Quản lý đặt  bàn</a></li>
+                <li><a href="index.php?act=listsp">Món Ăn</a></li>
+                <li><a href="index.php?act=dskh">Khách Hàng</a></li>
+                <li><a href="index.php?act=listbill">Đơn hàng</a></li>
+                <li><a href="index.php?act=lienhe">Liên hệ</a></li>
+                <li><a href="index.php?act=thongke">Thống Kê</a></li>
             </ul>
 </div>
 <div class="">

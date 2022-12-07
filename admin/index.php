@@ -8,7 +8,7 @@ include "../model/thongke.php";
 include "../model/taikhoan.php";
 include "../model/lienhe.php";
 include "../model/cart.php";
-
+include "../model/datban.php";
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {
@@ -88,7 +88,7 @@ if (isset($_GET['act'])) {
             break;
         case 'suabia':
             if (($_GET['id']) && ($_GET['id'] > 0)) {
-                $dm = loadone_anhbia($_GET['id']);
+                $ab = loadone_anhbia($_GET['id']);
             }
             include "slider/update.php";
             break;
@@ -197,7 +197,13 @@ if (isset($_GET['act'])) {
             break;
 
         case 'thongke':
+            if (isset($_GET['loc'])) {
+                $listthongke2 = loadall_thongke2($_GET['loc']);
+            }else{
+                $listthongke2 = loadall_thongke2();
+            }
             $listthongke = loadall_thongke();
+            
             include "thongke/list.php";
             break;
 
@@ -232,7 +238,8 @@ if (isset($_GET['act'])) {
             include "bill/listbill.php";
             break;
         case 'quanlyban':
-            include "";
+            $listbooking = load_all_booking();
+            include "table/list.php";
             break;
         case 'listban':
             include "table/list.php";
