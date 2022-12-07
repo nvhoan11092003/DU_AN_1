@@ -233,9 +233,8 @@ if (isset($_GET['act'])) {
             if (isset($_GET['id']) && $_GET['id']) {
                 $id = $_GET['id'];
                 delete_bill($id);
+                header("location:".$_SERVER["HTTP_REFERER"]);
             }
-            $listbill = loadall_bill('', 0);
-            include "bill/listbill.php";
             break;
         case 'quanlyban':
             $listbooking = load_all_booking();

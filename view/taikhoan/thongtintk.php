@@ -63,7 +63,19 @@ if (isset($_POST['submit'])) {
     </select>
     <!-- địa chỉ -->
     <label class="w-full" for="address">Địa Chỉ</label>
-    <input name="address" id="address" name="address" value="<?= isset($address) ? $address : "" ?>" class="p-2 mb-7 border border-black  text-black rounded-md w-full ">
+    <select class="p-2  text-2xl mb-7 border border-black  text-black rounded-md w-full " name="address" id="">
+                            <option value="1" <?= ($address == '1') ? 'selected' : '' ?>>Quận/huyện</option>
+                            <option value="2" <?= ($address == '2') ? 'selected' : '' ?>>Ba Đình</option>
+                            <option value="3" <?= ($address == '3') ? 'selected' : '' ?>>Ba Vì</option>
+                            <option value="4" <?= ($address == '4') ? 'selected' : '' ?>>Bắc Từ Liêm</option>
+                            <option value="5" <?= ($address == '5') ? 'selected' : '' ?>>Cầu Giấy</option>
+                            <option value="6" <?= ($address == '6') ? 'selected' : '' ?>>Chương Mỹ</option>
+                            <option value="7" <?= ($address == '7') ? 'selected' : '' ?>>Đan Phượng</option>
+                            <option value="8" <?= ($address == '8') ? 'selected' : '' ?>>Đông Anh</option>
+                            <option value="9" <?= ($address == '9') ? 'selected' : '' ?>>Đống Đa</option>
+                            <option value="10" <?= ($address == '10') ? 'selected' : '' ?>>Gia Lâm</option>
+                            <option value="11" <?= ($address == '11') ? 'selected' : '' ?>>Hà Đông</option>
+                        </select>
     <!-- nút cập nhật -->
     <input type="submit" value="Cập Nhập" name="submit" class="p-3 px-6 rounded-lg bg-blue-500 text-white hover:bg-blue-600">
 </form>
