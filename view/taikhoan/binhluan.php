@@ -16,7 +16,6 @@ $list_comment =   select_comment_by_user($id_user,$start_record, $record_per_pag
 // lấy số lượng bản ghi
 $count_record = count_comment();
 // số lượng page
-
 $number_page =  ceil($count_record / $record_per_page);
 // biến khi chọn page nút sẽ có màu sanh
 $focus=" bg-blue-500 hover:bg-blue-500";

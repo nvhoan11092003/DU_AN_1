@@ -221,7 +221,11 @@ function bill_chi_tiet($listbill)
 function delete_bill($id){
     $sql = "delete from bill where id =".$id;
     pdo_execute($sql);
+    $sql = "DELETE FROM cart WHERE idBill = $id";
+    pdo_execute($sql);
 }
+
+
 
 function update_status_bill($id,$status){
 $sql = "UPDATE bill SET status = '".$status."' where id = ".$id;
