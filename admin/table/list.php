@@ -1,6 +1,6 @@
 <div class="row">
             <div class="row frmtitle mb">
-                <h1>DANH SÁCH LOẠI MENU</h1>
+                <h1>DANH SÁCH LOẠI BÀN</h1>
             </div>
             <form action="index.php?act=listsp" method="post">
                 <!-- <input type="text" name="kyw">

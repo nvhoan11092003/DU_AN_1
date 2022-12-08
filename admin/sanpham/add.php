@@ -29,7 +29,7 @@
 
                     <div class="row mb10">
                         Hình ảnh<br>
-                        <input type="file" name="hinh" id="" >
+                        <input type="file" name="hinh" id="" required>
                     </div>
 
                     <div class="row mb10">
