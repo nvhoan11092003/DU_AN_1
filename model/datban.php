@@ -15,4 +15,31 @@ function load_all_tables(){
     $tables = pdo_query($sql);
     return $tables;
 }
+
+function max_table($id_table)
+{
+   $sql = "SELECT amount FROM tables WHERE id = $id_table";
+   $max_Table= pdo_query_one($sql);
+   return $max_Table['amount'];
+}
+
+
+function booked_table($id_table,$date,$session)
+{
+   $sql = "SELECT SUM(quantity) as quantity FROM booking  WHERE date like '%$date%' AND id_table = '$id_table' AND session = '$session'   GROUP BY date";
+   $booked_table= pdo_query_one($sql);
+   if ($booked_table==[]) {
+        return 0 ;
+   }
+   return $booked_table['quantity'];
+}
+
+
+
+
+
+
+
+
+
 ?>

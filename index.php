@@ -26,8 +26,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'trang_chu':
             include "view/home.php";
             break;
-        case 'dat_ban':
-            
+        case 'dat_ban':        
             if (isset($_SESSION['user'])&& $_SESSION['user']) {
                 $name_user = $_SESSION['user']['name'];
                 $tel_user = $_SESSION['user']['tel'];
@@ -41,20 +40,25 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             if (isset($_POST['datban']) && $_POST['datban']) {
                 $name = $_POST['name'];
                 $tel = $_POST['tel'];
-                $table_name = $_POST['table_name'];
+                $id_table = $_POST['id_table'];
                 $current = getdate();
                 $book_date = $current['mday']."/".$current['mon']."/".$current['year'];
                 $session = $_POST['session'];
                 $number_table = $_POST['number_table'];
                 $date = $_POST['date'];
                 $time = $_POST['time'];
-                
+                $max_table = max_table($id_table);
+                $booked_table = booked_table($id_table,$date,$session);
                 if (empty($name) || empty($tel) || empty($date) || empty($time)) {
                     $errors = "Dữ liệu không được để trống";
-                } else {
+                } 
+                else if ( ($booked_table+ $number_table ) > $max_table) {
+                    $errors = "hết bàn vui lòng chọn bàn khác";
+                }
+                else {
                     $errors = "";
                     $success = "Đặt bàn thành công";
-                    insert_datban($name, $tel,$table_name,$book_date,$session, $number_table, $date, $time);
+                    insert_datban($name, $tel,$id_table,$book_date,$session, $number_table, $date, $time);
                 }
             }
             include "view/dat_ban.php";

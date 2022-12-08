@@ -32,7 +32,7 @@
                         <form action="index.php?act=dat_ban" method="POST" enctype="multipart/form-data">
                             <input type="text" class="set-order-text" name="name" placeholder="Tên của bạn..." value="<?=$name_user?>">
                             <input type="text" class="set-order-text" name="tel" placeholder="Số điện thoại..." value="<?=$tel_user?>">
-                            <select class="set-order-text" name="table_name" id="">
+                            <select class="set-order-text" name="id_table" id="">
                                 
                                 <?php
                                 foreach ($tables as $value) {
