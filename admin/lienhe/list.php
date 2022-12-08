@@ -1,4 +1,6 @@
 <?php
+
+
 // lấy page hiện tại 
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
@@ -14,13 +16,9 @@ $listcontact =   loadpage_contact($start_record, $record_per_page);
 // lấy số lượng bản ghi
 $count_record = count_contact();
 // số lượng page
-
 $number_page =  ceil($count_record / $record_per_page);
 var_dump($number_page);
 
-
-// biến khi chọn page nút sẽ có màu sanh
-$focus=" bg-blue-500 hover:bg-blue-500";
 ?>
 <!-- jquery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -61,30 +59,12 @@ $focus=" bg-blue-500 hover:bg-blue-500";
             </table>
 
         </div>
-        <div class="mb-10">
-            <!-- nếu page <= 1 ẩn đi nút lùi  -->
-            <?php if ($page > 1) { ?>
-                <a href="index.php?act=lienhe">
-                <button class="p-3 w-[40px] hover:bg-stone-200 border border-stone-500"><<</button>
-                </a>
-                <a href="index.php?act=lienhe&page=<?=$page-1?>">
-                <button class="p-3 w-[40px]  hover:bg-stone-200 border border-stone-500"><</button>
-                </a>
-                <a href="index.php?act=lienhe&page=<?= $page - 2 ?>"><button class="p-3 w-[40px]  hover:bg-stone-200 border border-stone-500" <?= ($page - 2)< 1 ? "hidden" : "" ?> ><?= $page - 2 ?></button></a>
-                <a href="index.php?act=lienhe&page=<?= $page - 1 ?>"><button class="p-3 w-[40px]  hover:bg-stone-200 border border-stone-500"><?= $page - 1 ?></button></a>
-            
-            <?php } ?>
-            <a href="index.php?act=lienhe&page=<?= $page ?>"><button class="p-3 w-[40px]  hover:bg-stone-200 border border-stone-500 <?= $focus ?>"><?= $page ?></button></a>
-            
-            <!-- nếu max page thì ẩn đi nút tiến -->
-            <?php if ($page < $number_page) { ?>
-                <a href="index.php?act=lienhe&page=<?= $page + 1 ?>"><button class="p-3 w-[40px]  hover:bg-stone-200 border border-stone-500"><?= $page + 1 ?></button></a>
-                <a href="index.php?act=lienhe&page=<?= $page + 2 ?>"><button class="p-3 w-[40px]  hover:bg-stone-200 border border-stone-500" <?= ($page + 2) > $number_page ? "hidden" : "" ?>><?= $page + 2 ?></button></a>
-                <a href="index.php?act=lienhe&page=<?= $page + 1 ?>"><button class="p-3 w-[40px]  hover:bg-stone-200 border border-stone-500" >></button></a>
-                <a href="index.php?act=lienhe&page=<?= $number_page ?>"><button class="p-3 w-[40px] hover:bg-stone-200 border border-stone-500" >>></button></a>
-            <?php } ?>
+        <!-- nút bấm phân trang -->
+        <?php 
+            $href= "index.php?act=lienhe";
+            include "../model/nutbamphantrang.php";
+        ?>
 
-        </div>
         <div class="row mb10">
             <input type="button" value="Chọn tất cả">
             <input type="button" value="Bỏ chọn tất cả">

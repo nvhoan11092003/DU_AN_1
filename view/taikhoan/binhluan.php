@@ -1,8 +1,24 @@
 <?php
 
 $id_user = $_SESSION['user']['id'];
-$list_comment = select_comment_by_user($id_user,0,20);
-
+// lấy page hiện tại 
+if (isset($_GET['page'])) {
+    $page = $_GET['page'];
+} else {
+    $page = 1;
+}
+// số lượng bản ghi trên 1 trang 
+$record_per_page = 10;
+// bản ghi bắt đầu
+$start_record = ($page - 1) * $record_per_page;
+// lấy bản ghi theo page
+$list_comment =   select_comment_by_user($id_user,$start_record, $record_per_page);
+// lấy số lượng bản ghi
+$count_record = count_comment();
+// số lượng page
+$number_page =  ceil($count_record / $record_per_page);
+// biến khi chọn page nút sẽ có màu sanh
+$focus=" bg-blue-500 hover:bg-blue-500";
 
 
 ?>
@@ -15,6 +31,7 @@ $list_comment = select_comment_by_user($id_user,0,20);
             echo "
         <thead>
             <tr>
+                <th>stt</th>
                 <th></th>
                 <th>Tên Sản Phẩm</th>
                 <th>Thời Gian</th>
@@ -26,6 +43,7 @@ $list_comment = select_comment_by_user($id_user,0,20);
         <tbody>
             <?php foreach ($list_comment as $key => $value) : extract($value) ?>
                 <tr class="border-t border-stone-100">
+                    <td><?= $start_record+ $key + 1 ?></td>
                     <td class="p-2 "><img src="upload/<?= $img ?>" alt="" class="p-2 max-w-[100px] max-h-[100px]"></td>
                     <td class="w-[250px] text-blue-500  "><a  class="hover:no-underline p-12 hover:text-purple-600  " href="index.php?act=chitiet_sp&id=<?=$id?>"><?= $name ?></a> </td>
                     <td class="p-2 w-[300px]"><?= $time ?></td>
@@ -34,3 +52,13 @@ $list_comment = select_comment_by_user($id_user,0,20);
             <?php endforeach ?>
         </tbody>
     </table>
+
+    <!-- nút bấm phân trang -->
+        <?php 
+            $href= "index.php?act=lienhe";
+            include "model/nutbamphantrang.php";
+        ?>
+
+
+
+

@@ -27,20 +27,34 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "view/home.php";
             break;
         case 'dat_ban':
+            
+            if (isset($_SESSION['user'])&& $_SESSION['user']) {
+                $name_user = $_SESSION['user']['name'];
+                $tel_user = $_SESSION['user']['tel'];
+            }else{
+                $name_user = '';
+                $tel_user = '';
+            }
+            $tables = load_all_tables();
             $errors = "";
             $success = "";
             if (isset($_POST['datban']) && $_POST['datban']) {
                 $name = $_POST['name'];
                 $tel = $_POST['tel'];
-                $number_people = $_POST['number_people'];
+                $table_name = $_POST['table_name'];
+                $current = getdate();
+                $book_date = $current['mday']."/".$current['mon']."/".$current['year'];
+                $session = $_POST['session'];
+                $number_table = $_POST['number_table'];
                 $date = $_POST['date'];
                 $time = $_POST['time'];
+                
                 if (empty($name) || empty($tel) || empty($date) || empty($time)) {
                     $errors = "Dữ liệu không được để trống";
                 } else {
                     $errors = "";
                     $success = "Đặt bàn thành công";
-                    insert_datban($name, $tel, $number_people, $date, $time);
+                    insert_datban($name, $tel,$table_name,$book_date,$session, $number_table, $date, $time);
                 }
             }
             include "view/dat_ban.php";
@@ -122,13 +136,14 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             break;
         case 'addtocart':
             extract($_POST);
+            
             // var_dump($_SESSION['mycart']);
             foreach ($_SESSION['mycart'] as $key => $value) {
                 if ($value['0']==$id) {
                     $_SESSION['mycart']["$key"]['4'] +=  $amount ;
                     var_dump($_SESSION['mycart']["$key"]['4']+ 2);
                     header("location:" . $_SERVER["HTTP_REFERER"]);
-                    die;
+                    
                 }
             }
             

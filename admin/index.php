@@ -99,11 +99,11 @@ if (isset($_GET['act'])) {
             break;
 
         case 'updateslider':
-            if(isset($_GET['id']) && $_GET['id']){
+            if (isset($_GET['id']) && $_GET['id']) {
                 $id = $_GET['id'];
                 $status = $_GET['status'];
-                
-                update_anhbia($id,"",$status);
+
+                update_anhbia($id, "", $status);
                 $thongbao = "Cập nhật thành công !";
             }
             if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
@@ -233,9 +233,8 @@ if (isset($_GET['act'])) {
             if (isset($_GET['id']) && $_GET['id']) {
                 $id = $_GET['id'];
                 delete_bill($id);
+                header("location:".$_SERVER["HTTP_REFERER"]);
             }
-            $listbill = loadall_bill('', 0);
-            include "bill/listbill.php";
             break;
         case 'quanlyban':
             $listbooking = load_all_booking();
@@ -245,14 +244,25 @@ if (isset($_GET['act'])) {
             include "table/list.php";
             break;
         case 'status':
-            
+
             include "table/list.php";
             break;
+        case 'detailbill':
+            if(isset($_GET['idbill']) && $_GET['idbill']){
+                $idbill = $_GET['idbill'];
+                $bill = loadone_bill($idbill);
+                $billct = loadall_cart($idbill);
+            }
+
+            include "bill/detail.php";
+            break;
         case 'statusbill':
-            if(isset($_GET['id'])&& $_GET['id']){
-                $id = $_GET['id'];
-                $status = $_GET['status'];
-                update_status_bill($id,$status);
+            if (isset($_POST['update']) && $_POST['update']) {
+                if (isset($_GET['id']) && $_GET['id']) {
+                    $id = $_GET['id'];
+                    $status = $_POST['status'];
+                    update_status_bill($id, $status);
+                }
             }
             $listbill = loadall_bill('', 0);
             include "bill/listbill.php";
