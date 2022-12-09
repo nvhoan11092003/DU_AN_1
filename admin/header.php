@@ -13,10 +13,11 @@
     <link rel="stylesheet" href="../view/fonts/BerkshireSwash-Regular.ttf">
     <link rel="stylesheet" href="../view/fontawesome-free-6.2.0-web/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
 </head>
+
+
 
 <body>
     <div class="boxcenter">
@@ -26,15 +27,18 @@
         </div>
         <div class="row mb menu">
             <ul>
-                <li><a class="p-3 inline-block" href="index.php">Trang Chủ</a></li>
-                <li><a class="p-3 inline-block" href="index.php?act=lisdm">Danh Mục</a></li>
-                <li><a class="p-3 inline-block" href="index.php?act=addslider">Slider</a></li>
-                <li><a class="p-3 inline-block" href="index.php?act=quanlyban">Quản lý đặt bàn</a></li>
-                <li><a class="p-3 inline-block" href="index.php?act=listsp">Món Ăn</a></li>
-                <li><a class="p-3 inline-block" href="index.php?act=dskh">Khách Hàng</a></li>
-                <li><a class="p-3 inline-block" href="index.php?act=listbill">Đơn hàng</a></li>
-                <li><a class="p-3 inline-block" href="index.php?act=lienhe">Liên hệ</a></li>
-                <li><a class="p-3 inline-block" href="index.php?act=thongke">Thống Kê</a></li>
+                <li><a class="py-3 inline-block" href="index.php">Trang Chủ</a></li>
+                <li><a class="py-3 inline-block" href="index.php?act=table">bàn</a></li>
+                <li><a class="py-3 inline-block" href="index.php?act=lisdm">Danh Mục</a></li>
+                <li><a class="py-3 inline-block" href="index.php?act=addslider">Slider</a></li>
+                <li><a class="py-3 inline-block" href="index.php?act=quanlydatban">Quản lý đặt bàn</a></li>
+                <li><a class="py-3 inline-block" href="index.php?act=listsp">Món Ăn</a></li>
+                <li><a class="py-3 inline-block" href="index.php?act=dskh">Khách Hàng</a></li>
+                <li><a class="py-3 inline-block" href="index.php?act=listbill">Đơn hàng</a></li>
+                <li><a class="py-3 inline-block" href="index.php?act=lienhe">Liên hệ</a></li>
+                <li><a class="py-3 inline-block" href="index.php?act=binhluan">Bình Luận</a></li>
+                
+                <li><a class="py-3 inline-block" href="index.php?act=thongke">Thống Kê</a></li>
             </ul>
 </div>
 <div class="">

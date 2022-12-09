@@ -52,7 +52,7 @@ var_dump($number_page);
                             <td><?= $purpose ?></td>
                             <td><?= $description ?></td>
                             <td><?= $tel ?></td>
-                            <td><a href="lienhe/xoa.php?id=<?= $id ?>"><button>Xóa</button></a></td>
+                            <td><a class="p-4 bg-blue-500 rounded-md text-white hover:bg-blue-600" href="lienhe/xoa.php?id=<?= $id ?>" onclick="return confirm('Bạn có muốn Xóa liên hệ không ?')"><button>Xóa</button></a></td>
                         </tr>
                     <?php endforeach ?>
                 </tbody>

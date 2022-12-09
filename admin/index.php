@@ -9,6 +9,8 @@ include "../model/taikhoan.php";
 include "../model/lienhe.php";
 include "../model/cart.php";
 include "../model/datban.php";
+include "../model/table.php";
+include "../model/binhluan.php";
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
     switch ($act) {
@@ -236,16 +238,15 @@ if (isset($_GET['act'])) {
                 header("location:".$_SERVER["HTTP_REFERER"]);
             }
             break;
-        case 'quanlyban':
+        case 'quanlydatban':
             $listbooking = load_all_booking();
-            include "table/list.php";
+            include "quanlydatban/list.php";
             break;
-        case 'listban':
-            include "table/list.php";
+        case 'listdatban':
+            include "quanlydatban/list.php";
             break;
         case 'status':
-
-            include "table/list.php";
+            include "quanlydatban/list.php";
             break;
         case 'detailbill':
             if(isset($_GET['idbill']) && $_GET['idbill']){
@@ -266,6 +267,26 @@ if (isset($_GET['act'])) {
             }
             $listbill = loadall_bill('', 0);
             include "bill/listbill.php";
+            break;
+        case 'binhluan':
+            include "binhluan/list.php";
+            break;
+        case 'table':
+            include "table/list.php";
+            break;
+        case 'addtable':
+            include "table/add.php";
+            break;
+        case 'suatable':
+            include "table/sua.php";
+            break;
+        case '':
+            break;
+        case '':
+            break;
+        case '':
+            break;
+        case '':
             break;
         default:
             include "home.php";

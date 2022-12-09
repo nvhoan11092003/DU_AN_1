@@ -1,67 +1,72 @@
+<?php
+
+
+// lấy page hiện tại 
+if (isset($_GET['page'])) {
+    $page = $_GET['page'];
+} else {
+    $page = 1;
+}
+// số lượng bản ghi trên 1 trang 
+$record_per_page = 10;
+// bản ghi bắt đầu
+$start_record = ($page - 1) * $record_per_page;
+// lấy bản ghi theo page
+$listtable =   loadpage_table($start_record, $record_per_page);
+// lấy số lượng bản ghi
+$count_record = count_table();
+// số lượng page
+$number_page =  ceil($count_record / $record_per_page);
+
+?>
+
+
+<script src="https://cdn.tailwindcss.com"></script>
 <div class="row">
-            <div class="row frmtitle mb">
-                <h1>DANH SÁCH LOẠI BÀN</h1>
-            </div>
-            <form action="index.php?act=listsp" method="post">
-                <!-- <input type="text" name="kyw">
-                <select name="iddm">
-                        <option value="0" selected> Tất cả </option>
-                      
-                </select>
-                <input type="submit" name ="listok" value ="Tìm"> -->
-            </form>
-            <div class="row frmcontent">
-                    <div class="row mb10 frmdsloai">
-                        
-                        <table>
-                            <tr>
-                                <th></th>
-                                <th>MÃ LOẠI</th>
-                                <th>TÊN  KHÁCH HÀNG</th>
-                                <th>SỐ ĐIỆN THOẠI</th>
-                                <th>LOẠI BÀN</th>
-                                <th>NGÀY ĐẶT BÀN</th>
-                                <th>NGÀY NHẬN BÀN</th>
-                                <th>BUỔI</th>
-                                <th>CHECK IN</th>
-                                <th>SỐ LƯỢNG</th>
-                                
-                                <th>TRẠNG THÁI</th>
-                                <th></th>
-                            </tr>
-                            <?php
-                                foreach($listbooking as $booking){
-                                    extract($booking);
-                                    $suasp = "index.php?act=suasp&id=".$id;
-                                    $xoasp = "index.php?act=xoasp&id=".$id;
-                                    
-                                    echo '<tr>
-                                            <td><input type="checkbox" id=""></td>
-                                            <td>'.$id.'</td>
-                                            <td>'.$name.'</td>
-                                            <td>'.$tel.'</td>
-                                            <td>'.$id_table.'</td>
-                                            <td>'.$book_date.'</td>
-                                           
-                                            <td>'.$date.'</td>
-                                            <td>'.$session.'</td>
-                                            <td>'.$time.'</td>
-                                            <td>'.$quantity.'</td>
-                                            <td>'.$status.'</td>
-                                            <td><a href="'.$suasp.'"><input type="button" value="Sửa"></a> <a href="'.$xoasp.'"><input type="button" value="Xóa"></a></td>
-                                        </tr>';
-                                }
-                            ?>
+    <div class="row frmtitle p-2">
+        <h1>DANH SÁCH Bàn Hiện có</h1>
+    </div>
+    <div class="row frmcontent">
+        <div class="row mb10 frmdsloai content" id="content">
+            <table class="">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên<nav></nav></th>
+                        <th>Số lượng bàn</th>
+                        <th>Thao Tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($listtable as $key => $value) : extract($value); ?>
+                        <tr>
+                            <td><?= $start_record+ $key + 1 ?></td>
+                            <td class="pl-[50px]"><?= $name ?></td>
+                            <td class="text-center" ><?= $amount ?></td>
+                            <td class="text-center">
+                            <a class="p-4 bg-blue-500 rounded-md text-white hover:bg-blue-600" href="table/xoa.php?id=<?= $id ?>" onclick="return confirm('Bạn có muốn Xóa <?= $name ?> không ?')"><button>Xóa</button></a>
+                            <a class="p-4 bg-red-500 rounded-md text-white hover:bg-red-600" href="index.php?act=suatable&id=<?= $id ?>"><button>Sửa</button> </a>
+                            </td>
+                        </tr>
+                    <?php endforeach ?>
+                </tbody>
+            </table>
 
-                        </table>
-
-                    </div>
-
-                    <div class="row mb10">
-                        <input type="button" value="Chọn tất cả">
-                        <input type="button" value="Bỏ chọn tất cả">
-                        <input type="button" value="Xóa thư mục đã chọn">
-                        <a href="index.php?act=addsp"><input type="button" value="Nhập thêm"></a>
-                    </div>
-            </div>
         </div>
+        <!-- nút bấm phân trang -->
+        <?php 
+            $href= "index.php?act=table";
+            include "../model/nutbamphantrang.php";
+        ?>
+
+        <div class="row mb10">
+            <input type="button" value="Chọn tất cả">
+            <input type="button" value="Bỏ chọn tất cả">
+            <input type="button" value="Xóa thư mục đã chọn">
+            <a href="index.php?act=addtable"><input type="button" value="Nhập thêm"></a>
+        </div>
+
+    </div>
+</div>
+
+
