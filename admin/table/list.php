@@ -44,8 +44,8 @@ $number_page =  ceil($count_record / $record_per_page);
                             <td class="pl-[50px]"><?= $name ?></td>
                             <td class="text-center" ><?= $amount ?></td>
                             <td class="text-center">
-                            <a class="p-4 bg-blue-500 rounded-md text-white hover:bg-blue-600" href="table/xoa.php?id=<?= $id ?>" onclick="return confirm('Bạn có muốn Xóa <?= $name ?> không ?')"><button>Xóa</button></a>
-                            <a class="p-4 bg-red-500 rounded-md text-white hover:bg-red-600" href="index.php?act=suatable&id=<?= $id ?>"><button>Sửa</button> </a>
+                            <a class="p-4 bg-red-500 rounded-md text-white hover:bg-red-600" href="table/xoa.php?id=<?= $id ?>" onclick="return confirm('Bạn có muốn Xóa <?= $name ?> không ?')"><button>Xóa</button></a>
+                            <a class="p-4 bg-blue-500 rounded-md text-white hover:bg-blue-600" href="index.php?act=suatable&id=<?= $id ?>"><button>Sửa</button> </a>
                             </td>
                         </tr>
                     <?php endforeach ?>

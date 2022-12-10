@@ -94,6 +94,7 @@ $list_bill = loadpage_bill("", $id_user);
                 <th>Tên Sản Phẩm</th>
                 <th>Thời Gian</th>
                 <th>Nội Dung</th>
+                <th>Thao Tác</th>
             </tr>
         </thead>";
         } ?>
@@ -104,6 +105,7 @@ $list_bill = loadpage_bill("", $id_user);
                     <td class="w-[250px] text-blue-500  "><a class="hover:no-underline p-12 hover:text-purple-600  " href="index.php?act=chitiet_sp&id=<?= $id ?>"><?= $name ?></a> </td>
                     <td class="p-2 w-[300px]"><?= $time ?></td>
                     <td class="p-2 max-w-[400px] overflow-hidden"><?= $content ?> </td>
+                    <td><a class="p-4 bg-red-500 rounded-md text-white hover:bg-red-600 hover:text-white" href="admin/binhluan/xoa.php?id=<?= $id_comment ?>" onclick="return confirm('Bạn có muốn Xóa liên hệ không ?')"><button>Xóa</button></a></td>
                 </tr>
             <?php endforeach ?>
         </tbody>
