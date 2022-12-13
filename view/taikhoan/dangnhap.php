@@ -1,6 +1,11 @@
 <?php
 
-if (!isset($_POST['submit'])) {
+if (isset($_SESSION['user'])) {
+    header('location:index.php');
+  }
+
+
+if (!isset($_POST['submit']) ) {
     $_SESSION['HTTP_REFERER'] =  $_SERVER["HTTP_REFERER"];
 }
 
@@ -34,13 +39,13 @@ if (isset($_POST['submit']) && $_POST['submit'] != "") {
             <!-- báo lỗi đăng nhập thất bại -->
             <p class="text-red-500"><?=isset($error)? $error : "" ?></p>
             <input class="w-[350px] text-2xl p-4 text-black my-5 border border-gray-500 rounded-2xl" type="email" placeholder="Email" name="email">
-            <input class="w-[350px] text-2xl p-4 text-black my-5 border border-gray-500 rounded-2xl " type="text" placeholder="Mật Khẩu" name="password">
+            <input class="w-[350px] text-2xl p-4 text-black my-5 border border-gray-500 rounded-2xl " type="password" placeholder="Mật Khẩu" name="password">
             <div class="w-[350px] my-3 flex items-center justify-between">
                 <label class="hover:text-blue-500 text-black " for="remember">
                     <input type="checkbox" id="remember">
                     Ghi Nhớ Mật Khẩu
                 </label>
-                <a class="hover:text-blue-500 text-black hover:no-underline" href="">Quên Mật Khẩu</a>
+                <a class="hover:text-blue-500 text-black hover:no-underline" href="index.php?act=quenmk">Quên Mật Khẩu</a>
             </div>
             <a class="w-[350px] mb-5 flex-none flex justify-end hover:text-blue-500 text-black hover:no-underline" href="index.php?act=dangky">Tạo Tài Khoản</a>
             <input class="text-2xl p-4 mb-[15px] w-[350px] text-white bg-black rounded-2xl delay-100 hover:bg-blue-500" type="submit" name="submit" value="Đăng Nhập">

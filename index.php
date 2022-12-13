@@ -116,8 +116,8 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'billct':
             include "view/taikhoan/thongtin.php";
             break;
-        case 'value':
-            # code...
+        case 'quenmk':
+            include "view/taikhoan/quenmk.php";
             break;
         case 'value':
             # code...
@@ -226,7 +226,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "view/cart/billconfirm.php";
             break;
         default:
-            # code...
+            include "view/home.php";
             break;
     }
 } else {
